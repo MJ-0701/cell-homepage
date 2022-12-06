@@ -1,0 +1,104 @@
+/* Home 화면에 적용될 CSS */
+
+
+/* Updated News */
+.middle-box .updated-news {
+    margin: 15px;
+}
+.middle-box .updated-news .updated-news-wrap {
+    display: flex;
+}
+
+
+/* news 세부내용 */
+.updated-news-wrap .updated-news-left {
+    flex: 0.5;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+}
+.updated-news-wrap .updated-news-left .news-line {
+    font-size: 11px;
+    display: flex;
+    margin-bottom: 2px;
+}
+.news-line .news-block-img {
+    background-color: rgb(242,98,94);
+    width: 36px;
+    height: 16px;
+    padding: 1px;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+.news-line .news-block-txt {
+    background-color: rgb(102,122,193);
+    width: 36px;
+    height: 16px;
+    padding: 1px;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+
+/* news 카테고리 */
+.updated-news-wrap .updated-news-right {
+    flex: 0.5;
+}
+.updated-news-right .category {
+    display: flex;
+    flex-direction: column;
+}
+.updated-news-right .category .category-line {
+    display: flex;
+    margin-bottom: 1px;
+}
+.updated-news-right .category .diary {
+    flex: 1;
+    font-family: 'NeoDunggeunmo';
+    font-size: 5px;
+}
+.updated-news-right .category .picture {
+    flex: 1;
+    font-family: 'NeoDunggeunmo';
+    font-size: 5px;
+}
+.updated-news-right .category .board {
+    flex: 1;
+}
+.updated-news-right .category .guest {
+    flex: 1;
+}
+
+
+/* Miniroom */
+.middle-box .miniroom {
+    margin: 15px;
+}
+.miniroom .miniroom-img {
+    background-image: url('https://mblogthumb-phinf.pstatic.net/MjAxODA4MDlfNiAg/MDAxNTMzODI1ODA2OTIx.2VqP60KTC17E__eXF5O2ecF4JTPFni7N0kgtBQnV_Kcg.nkQ-P4SKHm7YfXAw0ClaPEeVpC1XAGpmbJtoH0aYYHwg.GIF.studygir/TTITPYTT_%2833%29.gif?type=w2');
+    height: 310px;
+}
+
+
+/* Updated news와 Miniroom 폰트 설정 */
+.top-msg {
+    color: rgb(63,133,172);
+    font-family: 'KOTRA_BOLD-Bold';
+    font-size: 13px;
+}
+
+
+/* 구분선 설정 */
+hr {
+    border-bottom: 0px;
+    margin-top: 1px;
+}
+hr.dotted {
+    border: none;
+    width: 100%;
+    border: 0.1px dashed rgb(192, 191, 191);
+}
