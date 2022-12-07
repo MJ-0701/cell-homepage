@@ -9,9 +9,6 @@ body {
     background-image: url("../images/pattern.png");
     background-size: 100px;
     background-color: #a3a3a3;
-
-
-    position: fixed;
     left: 0;
     top: 0;
     right: 0;
@@ -182,10 +179,4 @@ body {
 }
 .dropdown .padotagi option {
     font-family: 'KyoboHand';
-}
-
-@media (max-width: 480px) {
-    .bookdot{
-        width: auto;
-    }
 }
