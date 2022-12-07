@@ -2,181 +2,373 @@
 
 
 /* 기본 레이아웃 구조*/
-* {
-    font-family: 'Noto Sans KR', sans-serif;
+
+
+@media (max-width: 767px){
+/*모바일*/
+    body {
+
+        background-size: 100px;
+        /*background-color: #a3a3a3;*/
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .bookcover {
+        width: 960px;
+        /*height: 600px;*/
+        /*margin: 50px auto;*/
+
+
+        /*background-color: #b4d1da;*/
+
+
+        border-radius: 9px;
+        /*border: 1px solid #738186;*/
+
+
+        position: relative;
+    }
+    .bookdot {
+        position: relative;
+        top: 10px;
+        /*left: 10px;*/
+
+
+        width: 936px;
+        height: 575px;
+
+
+        border: 2px dashed white;
+        border-radius: 9px;
+    }
+    .page {
+        position: absolute;
+        top: 8px;
+        left: 7px;
+
+
+        width: 921px;
+        height: 560px;
+        /*background-color: rgb(238,238,238);*/
+
+
+        border: none;
+        border-radius: 9px;
+
+
+        /*display: flex;*/
+    }
+    .left-container {
+        display: flex;
+        /*flex-direction: column;*/
+        flex: 0.4;
+        margin-bottom: 15px;
+    }
+    .middle-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        margin-bottom: 15px;
+    }
+    .right-container {
+        flex: 0.15;
+        margin: 15px 15px 15px 0;
+    }
+
+
+    /* 왼쪽 컨테이너 세부사항 */
+    .left-container .left-visits {
+        flex: 0.2;
+    }
+    .left-container .left-visits p {
+        font-size: 12px;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .left-container .left-box {
+        background-color: white;
+        border: 1px solid #ced1d3;
+        border-radius: 9px;
+        margin: 0 15px;
+        flex: 2;
+        padding: 15px;
+    }
+
+
+    /* 가운데 컨테이너 세부사항 */
+    .middle-container .middle-title {
+        flex: 0.2;
+        display: flex;
+    }
+    .middle-container .middle-box {
+        flex: 2;
+        background-color: white;
+        border: 1px solid #ced1d3;
+        border-radius: 9px;
+    }
+    .middle-container .middle-title .middle-desc {
+        flex: 2;
+        font-size: 15px;
+
+
+        height: 20px;
+        margin-top: 20px
+    }
+    .middle-container .middle-title .middle-url {
+        flex: 1;
+        font-size: 11px;
+
+
+        height: 20px;
+        margin-top: 25px
+    }
+
+
+    /* 오른쪽 컨테이너(메뉴바) 세부사항 */
+    .right-container .menu-wrap {
+        margin-top: 60px;
+    }
+    .right-container .menu-wrap .menu {
+        height: 32px;
+        padding: 7px;
+        box-sizing: border-box;
+        background-color: rgb(63, 63, 63);
+        margin-bottom: 13px;
+        border-radius: 0px 7px 7px 0px;
+
+
+        color: #fff;
+        font-family: 'KyoboHand';
+        font-size: 14px;
+
+
+        cursor: pointer;
+    }
+    .right-container .menu-wrap .menu:hover {
+        background-color: rgb(179, 179, 179);
+    }
+
+
+    /* Profile */
+    .left-box .profile-img {
+        width: 170px;
+        margin: 5px 10px;
+    }
+    .left-box .profile p {
+        font-size: 13px;
+        font-family: 'KyoboHand';
+        height: 130px;
+        margin: 0px 10px;
+    }
+    .left-box .profile .profile-name {
+        font-size: 15px;
+        font-family: 'KyoboHand';
+        margin: 0px 10px;
+    }
+    .left-box .profile .dropdown {
+        margin: 5px 10px;
+    }
+    .dropdown .padotagi {
+        font-family: 'KyoboHand';
+        color: #333;
+        width: 130px;
+        border: 1px solid #c2c4c5;
+        border-radius: 2px;
+    }
+    .dropdown .padotagi option {
+        font-family: 'KyoboHand';
+    }
 }
-body {
 
-    background-size: 100px;
-    background-color: #a3a3a3;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-}
-.bookcover {
-    width: 960px;
-    height: 600px;
-    margin: 50px auto;
-
-
-    background-color: #b4d1da;
-
-
-    border-radius: 9px;
-    border: 1px solid #738186;
-
-
-    position: relative;
-}
-.bookdot {
-    position: relative;
-    top: 10px;
-    left: 10px;
-
-
-    width: 936px;
-    height: 575px;
-
-
-    border: 2px dashed white;
-    border-radius: 9px;
-}
-.page {
-    position: absolute;
-    top: 8px;
-    left: 7px;
-
-
-    width: 921px;
-    height: 560px;
-    background-color: rgb(238,238,238);
-
-
-    border: none;
-    border-radius: 9px;
-
-
-    display: flex;
-}
-.left-container {
-    display: flex;
-    flex-direction: column;
-    flex: 0.4;
-    margin-bottom: 15px;
-}
-.middle-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-left: 5px;
-    margin-bottom: 15px;
-}
-.right-container {
-    flex: 0.15;
-    margin: 15px 15px 15px 0;
+@media (min-width: 768px) and (max-width: 991px) {
+/*테블릿 세로*/
 }
 
-
-/* 왼쪽 컨테이너 세부사항 */
-.left-container .left-visits {
-    flex: 0.2;
-}
-.left-container .left-visits p {
-    font-size: 12px;
-    text-align: center;
-    padding-top: 5px;
-}
-.left-container .left-box {
-    background-color: white;
-    border: 1px solid #ced1d3;
-    border-radius: 9px;
-    margin: 0 15px;
-    flex: 2;
-    padding: 15px;
+@media (min-width: 992px) and (max-width: 1199px) {
+/*테블릿 가로*/
 }
 
+@media (min-width: 1200px) {
+/*데스크탑 일반*/
+    * {
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    body {
 
-/* 가운데 컨테이너 세부사항 */
-.middle-container .middle-title {
-    flex: 0.2;
-    display: flex;
-}
-.middle-container .middle-box {
-    flex: 2;
-    background-color: white;
-    border: 1px solid #ced1d3;
-    border-radius: 9px;
-}
-.middle-container .middle-title .middle-desc {
-    flex: 2;
-    font-size: 15px;
-
-
-    height: 20px;
-    margin-top: 20px
-}
-.middle-container .middle-title .middle-url {
-    flex: 1;
-    font-size: 11px;
+        background-size: 100px;
+        background-color: #a3a3a3;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .bookcover {
+        width: 960px;
+        height: 600px;
+        margin: 50px auto;
 
 
-    height: 20px;
-    margin-top: 25px
-}
+        background-color: #b4d1da;
 
 
-/* 오른쪽 컨테이너(메뉴바) 세부사항 */
-.right-container .menu-wrap {
-    margin-top: 60px;
-}
-.right-container .menu-wrap .menu {
-    height: 32px;
-    padding: 7px;
-    box-sizing: border-box;
-    background-color: rgb(63, 63, 63);
-    margin-bottom: 13px;
-    border-radius: 0px 7px 7px 0px;
+        border-radius: 9px;
+        border: 1px solid #738186;
 
 
-    color: #fff;
-    font-family: 'KyoboHand';
-    font-size: 14px;
+        position: relative;
+    }
+    .bookdot {
+        position: relative;
+        top: 10px;
+        left: 10px;
 
 
-    cursor: pointer;
-}
-.right-container .menu-wrap .menu:hover {
-    background-color: rgb(179, 179, 179);
-}
+        width: 936px;
+        height: 575px;
 
 
-/* Profile */
-.left-box .profile-img {
-    width: 170px;
-    margin: 5px 10px;
-}
-.left-box .profile p {
-    font-size: 13px;
-    font-family: 'KyoboHand';
-    height: 130px;
-    margin: 0px 10px;
-}
-.left-box .profile .profile-name {
-    font-size: 15px;
-    font-family: 'KyoboHand';
-    margin: 0px 10px;
-}
-.left-box .profile .dropdown {
-    margin: 5px 10px;
-}
-.dropdown .padotagi {
-    font-family: 'KyoboHand';
-    color: #333;
-    width: 130px;
-    border: 1px solid #c2c4c5;
-    border-radius: 2px;
-}
-.dropdown .padotagi option {
-    font-family: 'KyoboHand';
+        border: 2px dashed white;
+        border-radius: 9px;
+    }
+    .page {
+        position: absolute;
+        top: 8px;
+        left: 7px;
+
+
+        width: 921px;
+        height: 560px;
+        background-color: rgb(238,238,238);
+
+
+        border: none;
+        border-radius: 9px;
+
+
+        display: flex;
+    }
+    .left-container {
+        display: flex;
+        flex-direction: column;
+        flex: 0.4;
+        margin-bottom: 15px;
+    }
+    .middle-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        margin-bottom: 15px;
+    }
+    .right-container {
+        flex: 0.15;
+        margin: 15px 15px 15px 0;
+    }
+
+
+    /* 왼쪽 컨테이너 세부사항 */
+    .left-container .left-visits {
+        flex: 0.2;
+    }
+    .left-container .left-visits p {
+        font-size: 12px;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .left-container .left-box {
+        background-color: white;
+        border: 1px solid #ced1d3;
+        border-radius: 9px;
+        margin: 0 15px;
+        flex: 2;
+        padding: 15px;
+    }
+
+
+    /* 가운데 컨테이너 세부사항 */
+    .middle-container .middle-title {
+        flex: 0.2;
+        display: flex;
+    }
+    .middle-container .middle-box {
+        flex: 2;
+        background-color: white;
+        border: 1px solid #ced1d3;
+        border-radius: 9px;
+    }
+    .middle-container .middle-title .middle-desc {
+        flex: 2;
+        font-size: 15px;
+
+
+        height: 20px;
+        margin-top: 20px
+    }
+    .middle-container .middle-title .middle-url {
+        flex: 1;
+        font-size: 11px;
+
+
+        height: 20px;
+        margin-top: 25px
+    }
+
+
+    /* 오른쪽 컨테이너(메뉴바) 세부사항 */
+    .right-container .menu-wrap {
+        margin-top: 60px;
+    }
+    .right-container .menu-wrap .menu {
+        height: 32px;
+        padding: 7px;
+        box-sizing: border-box;
+        background-color: rgb(63, 63, 63);
+        margin-bottom: 13px;
+        border-radius: 0px 7px 7px 0px;
+
+
+        color: #fff;
+        font-family: 'KyoboHand';
+        font-size: 14px;
+
+
+        cursor: pointer;
+    }
+    .right-container .menu-wrap .menu:hover {
+        background-color: rgb(179, 179, 179);
+    }
+
+
+    /* Profile */
+    .left-box .profile-img {
+        width: 170px;
+        margin: 5px 10px;
+    }
+    .left-box .profile p {
+        font-size: 13px;
+        font-family: 'KyoboHand';
+        height: 130px;
+        margin: 0px 10px;
+    }
+    .left-box .profile .profile-name {
+        font-size: 15px;
+        font-family: 'KyoboHand';
+        margin: 0px 10px;
+    }
+    .left-box .profile .dropdown {
+        margin: 5px 10px;
+    }
+    .dropdown .padotagi {
+        font-family: 'KyoboHand';
+        color: #333;
+        width: 130px;
+        border: 1px solid #c2c4c5;
+        border-radius: 2px;
+    }
+    .dropdown .padotagi option {
+        font-family: 'KyoboHand';
+    }
 }
