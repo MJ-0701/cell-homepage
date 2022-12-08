@@ -81,6 +81,7 @@
 .miniroom .miniroom-img {
     background-image: url('https://mblogthumb-phinf.pstatic.net/MjAxODA4MDlfNiAg/MDAxNTMzODI1ODA2OTIx.2VqP60KTC17E__eXF5O2ecF4JTPFni7N0kgtBQnV_Kcg.nkQ-P4SKHm7YfXAw0ClaPEeVpC1XAGpmbJtoH0aYYHwg.GIF.studygir/TTITPYTT_%2833%29.gif?type=w2');
     height: 310px;
+    background-size: contain;
 }
 
 

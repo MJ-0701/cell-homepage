@@ -16,8 +16,8 @@
         bottom: 0;
     }
     .bookcover {
-        width: 960px;
-        /*height: 600px;*/
+        width: auto;
+        height: auto;
         /*margin: 50px auto;*/
 
 
@@ -32,12 +32,12 @@
     }
     .bookdot {
         position: relative;
-        top: 10px;
+        /*top: 10px;*/
         /*left: 10px;*/
 
 
-        width: 936px;
-        height: 575px;
+        width: auto;
+        height: auto;
 
 
         border: 2px dashed white;
@@ -49,8 +49,8 @@
         left: 7px;
 
 
-        width: 921px;
-        height: 560px;
+        width: auto;
+        height: auto;
         /*background-color: rgb(238,238,238);*/
 
 
@@ -62,7 +62,7 @@
     }
     .left-container {
         display: flex;
-        /*flex-direction: column;*/
+        flex-direction: column;
         flex: 0.4;
         margin-bottom: 15px;
     }
@@ -102,6 +102,7 @@
     .middle-container .middle-title {
         flex: 0.2;
         display: flex;
+        margin-bottom: 20px;
     }
     .middle-container .middle-box {
         flex: 2;
@@ -265,7 +266,7 @@
     }
     .right-container {
         flex: 0.15;
-        margin: 15px 15px 15px 0;
+        /*margin: 15px 15px 15px 0;*/
     }
 
 
