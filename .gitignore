@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# 운영설정
+real-application.yml

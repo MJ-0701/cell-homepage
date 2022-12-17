@@ -1,0 +1,817 @@
+2022-12-17 17:07:19.311  INFO 3195 --- [main] c.e.w.WebSeviceDemoApplication           : Starting WebSeviceDemoApplication using Java 11.0.13 on chaemyeongjeong-ui-MacBookAir.local with PID 3195 (/Users/chaemyeongjeong/IdeaProjects/web-service-demo/build/classes/java/main started by chaemyeongjeong in /Users/chaemyeongjeong/IdeaProjects/web-service-demo)
+2022-12-17 17:07:19.315  INFO 3195 --- [main] c.e.w.WebSeviceDemoApplication           : The following 1 profile is active: "local"
+2022-12-17 17:07:19.356  WARN 3195 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [real-application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [real-application.yml] - 2:13]
+2022-12-17 17:07:19.957  INFO 3195 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17 17:07:19.968  INFO 3195 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2022-12-17 17:07:20.441  INFO 3195 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-17 17:07:20.447  INFO 3195 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17 17:07:20.448  INFO 3195 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-17 17:07:20.570  INFO 3195 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17 17:07:20.571  INFO 3195 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1214 ms
+2022-12-17 17:07:20.631  WARN 3195 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2022-12-17 17:07:20.633  INFO 3195 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-17 17:07:20.652  INFO 3195 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-17 17:07:20.666 ERROR 3195 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles local are currently active).
+
+2022-12-17 17:09:11.404  INFO 3295 --- [main] c.e.w.WebSeviceDemoApplication           : Starting WebSeviceDemoApplication using Java 11.0.13 on chaemyeongjeong-ui-MacBookAir.local with PID 3295 (/Users/chaemyeongjeong/IdeaProjects/web-service-demo/build/classes/java/main started by chaemyeongjeong in /Users/chaemyeongjeong/IdeaProjects/web-service-demo)
+2022-12-17 17:09:11.407  INFO 3295 --- [main] c.e.w.WebSeviceDemoApplication           : The following 1 profile is active: "local"
+2022-12-17 17:09:11.447  WARN 3295 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [real-application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [real-application.yml] - 2:13]
+2022-12-17 17:09:12.053  INFO 3295 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17 17:09:12.068  INFO 3295 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2022-12-17 17:09:12.556  INFO 3295 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-17 17:09:12.563  INFO 3295 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17 17:09:12.564  INFO 3295 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-17 17:09:12.678  INFO 3295 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17 17:09:12.678  INFO 3295 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1230 ms
+2022-12-17 17:09:12.728  WARN 3295 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2022-12-17 17:09:12.730  INFO 3295 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-17 17:09:12.747  INFO 3295 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-17 17:09:12.760 ERROR 3295 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles local are currently active).
+
+2022-12-17 17:10:56.537  INFO 3375 --- [main] c.e.w.WebSeviceDemoApplication           : Starting WebSeviceDemoApplication using Java 11.0.13 on chaemyeongjeong-ui-MacBookAir.local with PID 3375 (/Users/chaemyeongjeong/IdeaProjects/web-service-demo/build/classes/java/main started by chaemyeongjeong in /Users/chaemyeongjeong/IdeaProjects/web-service-demo)
+2022-12-17 17:10:56.542  INFO 3375 --- [main] c.e.w.WebSeviceDemoApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-12-17 17:10:56.581  WARN 3375 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [real-application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [real-application.yml] - 2:13]
+2022-12-17 17:10:56.582  WARN 3375 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 7:12]
+2022-12-17 17:10:57.230  INFO 3375 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17 17:10:57.241  INFO 3375 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2022-12-17 17:10:57.724  INFO 3375 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-17 17:10:57.730  INFO 3375 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17 17:10:57.730  INFO 3375 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-17 17:10:57.829  INFO 3375 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17 17:10:57.830  INFO 3375 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1247 ms
+2022-12-17 17:10:57.880  WARN 3375 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2022-12-17 17:10:57.881  INFO 3375 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-17 17:10:57.916  INFO 3375 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-17 17:10:57.931 ERROR 3375 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2022-12-17 17:12:35.743  INFO 3447 --- [main] c.e.w.WebSeviceDemoApplication           : Starting WebSeviceDemoApplication using Java 11.0.13 on chaemyeongjeong-ui-MacBookAir.local with PID 3447 (/Users/chaemyeongjeong/IdeaProjects/web-service-demo/build/classes/java/main started by chaemyeongjeong in /Users/chaemyeongjeong/IdeaProjects/web-service-demo)
+2022-12-17 17:12:35.745  INFO 3447 --- [main] c.e.w.WebSeviceDemoApplication           : The following 1 profile is active: "local"
+2022-12-17 17:12:35.785  WARN 3447 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [real-application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [real-application.yml] - 2:13]
+2022-12-17 17:12:36.371  INFO 3447 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17 17:12:36.381  INFO 3447 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2022-12-17 17:12:36.869  INFO 3447 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-17 17:12:36.876  INFO 3447 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17 17:12:36.876  INFO 3447 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-17 17:12:36.970  INFO 3447 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17 17:12:36.971  INFO 3447 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1185 ms
+2022-12-17 17:12:37.272  INFO 3447 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-17 17:12:37.602  INFO 3447 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-17 17:12:37.674  INFO 3447 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-17 17:12:37.697  INFO 3447 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2022-12-17 17:12:37.799  INFO 3447 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-17 17:12:37.861  INFO 3447 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-12-17 17:12:37.965  INFO 3447 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-17 17:12:37.970  INFO 3447 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17 17:12:38.030  WARN 3447 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-17 17:12:38.167  INFO 3447 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-12-17 17:12:38.333  INFO 3447 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-17 17:12:38.344  INFO 3447 --- [main] c.e.w.WebSeviceDemoApplication           : Started WebSeviceDemoApplication in 3.262 seconds (JVM running for 3.928)
+2022-12-17 17:12:45.516  INFO 3447 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17 17:12:45.520  INFO 3447 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-17 17:12:45.535  INFO 3447 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-17 17:37:38.053  INFO 4609 --- [main] c.e.w.WebSeviceDemoApplication           : Starting WebSeviceDemoApplication using Java 11.0.13 on chaemyeongjeong-ui-MacBookAir.local with PID 4609 (/Users/chaemyeongjeong/IdeaProjects/web-service-demo/build/classes/java/main started by chaemyeongjeong in /Users/chaemyeongjeong/IdeaProjects/web-service-demo)
+2022-12-17 17:37:38.059  INFO 4609 --- [main] c.e.w.WebSeviceDemoApplication           : The following 1 profile is active: "local"
+2022-12-17 17:37:38.098  WARN 4609 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [real-application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [real-application.yml] - 2:13]
+2022-12-17 17:37:38.960  INFO 4609 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17 17:37:38.982  INFO 4609 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2022-12-17 17:37:39.483  INFO 4609 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-17 17:37:39.507  INFO 4609 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17 17:37:39.507  INFO 4609 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-17 17:37:39.618  INFO 4609 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17 17:37:39.618  INFO 4609 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1519 ms
+2022-12-17 17:37:39.906  INFO 4609 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-17 17:37:40.182  INFO 4609 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-17 17:37:40.246  INFO 4609 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-17 17:37:40.268  INFO 4609 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2022-12-17 17:37:40.375  INFO 4609 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-17 17:37:40.454  INFO 4609 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-12-17 17:37:40.814  INFO 4609 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-17 17:37:40.821  INFO 4609 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17 17:37:40.834  WARN 4609 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'querydslSupportCustom' defined in file [/Users/chaemyeongjeong/IdeaProjects/web-service-demo/build/classes/java/main/com/example/websevicedemo/global/support/QuerydslSupportCustom.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.Class<?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-12-17 17:37:40.834  INFO 4609 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17 17:37:40.836  INFO 4609 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-17 17:37:40.856  INFO 4609 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-17 17:37:40.861  INFO 4609 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-17 17:37:40.873  INFO 4609 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-17 17:37:40.905 ERROR 4609 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.websevicedemo.global.support.QuerydslSupportCustom required a bean of type 'java.lang.Class' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.Class' in your configuration.
+
+2022-12-17 17:40:28.732  INFO 4748 --- [main] c.e.w.WebSeviceDemoApplication           : Starting WebSeviceDemoApplication using Java 11.0.13 on chaemyeongjeong-ui-MacBookAir.local with PID 4748 (/Users/chaemyeongjeong/IdeaProjects/web-service-demo/build/classes/java/main started by chaemyeongjeong in /Users/chaemyeongjeong/IdeaProjects/web-service-demo)
+2022-12-17 17:40:28.734  INFO 4748 --- [main] c.e.w.WebSeviceDemoApplication           : The following 1 profile is active: "local"
+2022-12-17 17:40:28.787  WARN 4748 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [real-application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [real-application.yml] - 2:13]
+2022-12-17 17:40:29.697  INFO 4748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17 17:40:29.717  INFO 4748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2022-12-17 17:40:30.214  INFO 4748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-17 17:40:30.220  INFO 4748 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17 17:40:30.220  INFO 4748 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-17 17:40:30.339  INFO 4748 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17 17:40:30.339  INFO 4748 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1551 ms
+2022-12-17 17:40:30.637  INFO 4748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-17 17:40:30.907  INFO 4748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-17 17:40:30.970  INFO 4748 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-17 17:40:30.993  INFO 4748 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2022-12-17 17:40:31.096  INFO 4748 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-17 17:40:31.178  INFO 4748 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-12-17 17:40:31.536  INFO 4748 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-17 17:40:31.542  INFO 4748 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17 17:40:31.757  WARN 4748 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-17 17:40:31.924  INFO 4748 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-12-17 17:40:32.070  INFO 4748 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-12-17 17:40:32.282  INFO 4748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-17 17:40:32.284  INFO 4748 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-12-17 17:40:32.291  INFO 4748 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-12-17 17:40:32.303  INFO 4748 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-12-17 17:40:32.445  INFO 4748 --- [main] c.e.w.WebSeviceDemoApplication           : Started WebSeviceDemoApplication in 4.444 seconds (JVM running for 5.317)
+2022-12-17 17:42:17.191  INFO 4748 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17 17:42:17.194  INFO 4748 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-17 17:42:17.215  INFO 4748 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-17 17:42:21.313  INFO 4833 --- [main] c.e.w.WebSeviceDemoApplication           : Starting WebSeviceDemoApplication using Java 11.0.13 on chaemyeongjeong-ui-MacBookAir.local with PID 4833 (/Users/chaemyeongjeong/IdeaProjects/web-service-demo/build/classes/java/main started by chaemyeongjeong in /Users/chaemyeongjeong/IdeaProjects/web-service-demo)
+2022-12-17 17:42:21.320  INFO 4833 --- [main] c.e.w.WebSeviceDemoApplication           : The following 1 profile is active: "local"
+2022-12-17 17:42:21.380  WARN 4833 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [real-application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [real-application.yml] - 2:13]
+2022-12-17 17:42:22.212  INFO 4833 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17 17:42:22.232  INFO 4833 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+2022-12-17 17:42:22.728  INFO 4833 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-17 17:42:22.734  INFO 4833 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17 17:42:22.734  INFO 4833 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-17 17:42:22.852  INFO 4833 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17 17:42:22.852  INFO 4833 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1471 ms
+2022-12-17 17:42:23.189  INFO 4833 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-17 17:42:23.209  INFO 4833 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2022-12-17 17:42:23.273  INFO 4833 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-17 17:42:23.321  INFO 4833 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-17 17:42:23.608  INFO 4833 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-17 17:42:23.615  INFO 4833 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-12-17 17:42:24.059  INFO 4833 --- [main] p6spy                                    : #1671266544059 | took 19ms | statement | connection 1| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment_re_comment_list 
+       drop 
+       foreign key FKd3eq1ol3vev1uerefk62wy8ic
+
+    alter table comment_re_comment_list 
+       drop 
+       foreign key FKd3eq1ol3vev1uerefk62wy8ic;
+2022-12-17 17:42:24.065  WARN 4833 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table comment_re_comment_list 
+       drop 
+       foreign key FKd3eq1ol3vev1uerefk62wy8ic" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table comment_re_comment_list 
+       drop 
+       foreign key FKd3eq1ol3vev1uerefk62wy8ic" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at com.example.websevicedemo.WebSeviceDemoApplication.main(WebSeviceDemoApplication.java:10) ~[main/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'cyworld.comment_re_comment_list' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at com.p6spy.engine.wrapper.StatementWrapper.execute(StatementWrapper.java:114) ~[p6spy-3.8.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	... 35 common frames omitted
+
+2022-12-17 17:42:24.067  INFO 4833 --- [main] p6spy                                    : #1671266544067 | took 1ms | statement | connection 1| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment_re_comment_list 
+       drop 
+       foreign key FK9ppo4k9xc4j7v4u3yecbh3kps
+
+    alter table comment_re_comment_list 
+       drop 
+       foreign key FK9ppo4k9xc4j7v4u3yecbh3kps;
+2022-12-17 17:42:24.068  WARN 4833 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table comment_re_comment_list 
+       drop 
+       foreign key FK9ppo4k9xc4j7v4u3yecbh3kps" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table comment_re_comment_list 
+       drop 
+       foreign key FK9ppo4k9xc4j7v4u3yecbh3kps" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at com.example.websevicedemo.WebSeviceDemoApplication.main(WebSeviceDemoApplication.java:10) ~[main/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'cyworld.comment_re_comment_list' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at com.p6spy.engine.wrapper.StatementWrapper.execute(StatementWrapper.java:114) ~[p6spy-3.8.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	... 35 common frames omitted
+
+2022-12-17 17:42:24.070  INFO 4833 --- [main] p6spy                                    : #1671266544070 | took 1ms | statement | connection 1| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd
+
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd;
+2022-12-17 17:42:24.070  WARN 4833 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at com.example.websevicedemo.WebSeviceDemoApplication.main(WebSeviceDemoApplication.java:10) ~[main/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'cyworld.re_comment' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at com.p6spy.engine.wrapper.StatementWrapper.execute(StatementWrapper.java:114) ~[p6spy-3.8.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	... 35 common frames omitted
+
+2022-12-17 17:42:24.075  INFO 4833 --- [main] p6spy                                    : #1671266544075 | took 3ms | statement | connection 1| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists comment
+
+    drop table if exists comment;
+2022-12-17 17:42:24.085  INFO 4833 --- [main] p6spy                                    : #1671266544085 | took 2ms | statement | connection 1| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists comment_re_comment_list
+
+    drop table if exists comment_re_comment_list;
+2022-12-17 17:42:24.088  INFO 4833 --- [main] p6spy                                    : #1671266544088 | took 2ms | statement | connection 1| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists re_comment
+
+    drop table if exists re_comment;
+2022-12-17 17:42:24.129  INFO 4833 --- [main] p6spy                                    : #1671266544129 | took 38ms | statement | connection 2| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table comment (
+       id bigint not null auto_increment,
+        crated_at datetime(6),
+        updated_at datetime(6),
+        comment varchar(255),
+        comment_id varchar(255),
+        comment_pwd varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+
+    create table comment (
+       id bigint not null auto_increment,
+        crated_at datetime(6),
+        updated_at datetime(6),
+        comment varchar(255),
+        comment_id varchar(255),
+        comment_pwd varchar(255),
+        primary key (id)
+    ) engine=InnoDB;
+2022-12-17 17:42:24.134  INFO 4833 --- [main] p6spy                                    : #1671266544134 | took 4ms | statement | connection 2| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table comment_re_comment_list (
+       comment_id bigint not null,
+        re_comment_list_id bigint not null
+    ) engine=InnoDB
+
+    create table comment_re_comment_list (
+       comment_id bigint not null,
+        re_comment_list_id bigint not null
+    ) engine=InnoDB;
+2022-12-17 17:42:24.138  INFO 4833 --- [main] p6spy                                    : #1671266544138 | took 3ms | statement | connection 2| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table re_comment (
+       id bigint not null auto_increment,
+        crated_at datetime(6),
+        updated_at datetime(6),
+        re_comment varchar(255),
+        comment_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+
+    create table re_comment (
+       id bigint not null auto_increment,
+        crated_at datetime(6),
+        updated_at datetime(6),
+        re_comment varchar(255),
+        comment_id bigint,
+        primary key (id)
+    ) engine=InnoDB;
+2022-12-17 17:42:24.163  INFO 4833 --- [main] p6spy                                    : #1671266544163 | took 23ms | statement | connection 2| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment_re_comment_list 
+       add constraint UK_pbn91rebpot9r2hurvowi9ca0 unique (re_comment_list_id)
+
+    alter table comment_re_comment_list 
+       add constraint UK_pbn91rebpot9r2hurvowi9ca0 unique (re_comment_list_id);
+2022-12-17 17:42:24.174  INFO 4833 --- [main] p6spy                                    : #1671266544174 | took 11ms | statement | connection 2| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment_re_comment_list 
+       add constraint FKd3eq1ol3vev1uerefk62wy8ic 
+       foreign key (re_comment_list_id) 
+       references re_comment (id)
+
+    alter table comment_re_comment_list 
+       add constraint FKd3eq1ol3vev1uerefk62wy8ic 
+       foreign key (re_comment_list_id) 
+       references re_comment (id);
+2022-12-17 17:42:24.184  INFO 4833 --- [main] p6spy                                    : #1671266544184 | took 9ms | statement | connection 2| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment_re_comment_list 
+       add constraint FK9ppo4k9xc4j7v4u3yecbh3kps 
+       foreign key (comment_id) 
+       references comment (id)
+
+    alter table comment_re_comment_list 
+       add constraint FK9ppo4k9xc4j7v4u3yecbh3kps 
+       foreign key (comment_id) 
+       references comment (id);
+2022-12-17 17:42:24.194  INFO 4833 --- [main] p6spy                                    : #1671266544194 | took 9ms | statement | connection 2| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table re_comment 
+       add constraint FKlbau13r2qs2dvla5g9k3xnmpd 
+       foreign key (comment_id) 
+       references comment (id)
+
+    alter table re_comment 
+       add constraint FKlbau13r2qs2dvla5g9k3xnmpd 
+       foreign key (comment_id) 
+       references comment (id);
+2022-12-17 17:42:24.196  INFO 4833 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-17 17:42:24.200  INFO 4833 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17 17:42:24.501  WARN 4833 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-17 17:42:24.796  INFO 4833 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-12-17 17:42:25.038  INFO 4833 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-12-17 17:42:25.179  INFO 4833 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-17 17:42:25.183  INFO 4833 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-12-17 17:42:25.190  INFO 4833 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-12-17 17:42:25.203  INFO 4833 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-12-17 17:42:25.334  INFO 4833 --- [main] c.e.w.WebSeviceDemoApplication           : Started WebSeviceDemoApplication in 4.597 seconds (JVM running for 5.41)
+2022-12-17 17:45:52.532  INFO 4833 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17 17:45:52.535  INFO 4833 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-12-17 17:45:52.563  INFO 4833 --- [SpringApplicationShutdownHook] p6spy                                    : #1671266752563 | took 21ms | statement | connection 3| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment_re_comment_list 
+       drop 
+       foreign key FKd3eq1ol3vev1uerefk62wy8ic
+
+    alter table comment_re_comment_list 
+       drop 
+       foreign key FKd3eq1ol3vev1uerefk62wy8ic;
+2022-12-17 17:45:52.571  INFO 4833 --- [SpringApplicationShutdownHook] p6spy                                    : #1671266752571 | took 7ms | statement | connection 3| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment_re_comment_list 
+       drop 
+       foreign key FK9ppo4k9xc4j7v4u3yecbh3kps
+
+    alter table comment_re_comment_list 
+       drop 
+       foreign key FK9ppo4k9xc4j7v4u3yecbh3kps;
+2022-12-17 17:45:52.576  INFO 4833 --- [SpringApplicationShutdownHook] p6spy                                    : #1671266752576 | took 5ms | statement | connection 3| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd
+
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd;
+2022-12-17 17:45:52.579  INFO 4833 --- [SpringApplicationShutdownHook] p6spy                                    : #1671266752579 | took 2ms | statement | connection 3| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists comment
+
+    drop table if exists comment;
+2022-12-17 17:45:52.581  INFO 4833 --- [SpringApplicationShutdownHook] p6spy                                    : #1671266752581 | took 2ms | statement | connection 3| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists comment_re_comment_list
+
+    drop table if exists comment_re_comment_list;
+2022-12-17 17:45:52.583  INFO 4833 --- [SpringApplicationShutdownHook] p6spy                                    : #1671266752583 | took 1ms | statement | connection 3| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists re_comment
+
+    drop table if exists re_comment;
+2022-12-17 17:45:52.586  INFO 4833 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-17 17:45:52.604  INFO 4833 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-17 18:22:25.050  INFO 8234 --- [main] c.e.w.WebSeviceDemoApplication           : Starting WebSeviceDemoApplication using Java 11.0.13 on chaemyeongjeong-ui-MacBookAir.local with PID 8234 (/Users/chaemyeongjeong/IdeaProjects/web-service-demo/build/classes/java/main started by chaemyeongjeong in /Users/chaemyeongjeong/IdeaProjects/web-service-demo)
+2022-12-17 18:22:25.054  INFO 8234 --- [main] c.e.w.WebSeviceDemoApplication           : The following 1 profile is active: "local"
+2022-12-17 18:22:25.093  WARN 8234 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [real-application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [real-application.yml] - 2:13]
+2022-12-17 18:22:25.960  INFO 8234 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17 18:22:26.012  INFO 8234 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2022-12-17 18:22:26.542  INFO 8234 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-17 18:22:26.548  INFO 8234 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17 18:22:26.549  INFO 8234 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-17 18:22:26.700  INFO 8234 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17 18:22:26.701  INFO 8234 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1607 ms
+2022-12-17 18:22:27.007  INFO 8234 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-17 18:22:27.032  INFO 8234 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2022-12-17 18:22:27.102  INFO 8234 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-17 18:22:27.153  INFO 8234 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-17 18:22:27.513  INFO 8234 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-17 18:22:27.525  INFO 8234 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-12-17 18:22:27.622 ERROR 8234 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Table [re_comment] contains physical column name [comment_id] referred to by multiple logical column names: [comment_id], [commentId]
+2022-12-17 18:22:27.625  WARN 8234 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: Table [re_comment] contains physical column name [comment_id] referred to by multiple logical column names: [comment_id], [commentId]
+2022-12-17 18:22:27.626  INFO 8234 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-17 18:22:27.662  INFO 8234 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-17 18:22:27.667  INFO 8234 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-17 18:22:27.679  INFO 8234 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-17 18:22:27.699 ERROR 8234 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.DuplicateMappingException: Table [re_comment] contains physical column name [comment_id] referred to by multiple logical column names: [comment_id], [commentId]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at com.example.websevicedemo.WebSeviceDemoApplication.main(WebSeviceDemoApplication.java:10) ~[main/:na]
+Caused by: org.hibernate.DuplicateMappingException: Table [re_comment] contains physical column name [comment_id] referred to by multiple logical column names: [comment_id], [commentId]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl$TableColumnNameBinding.bindPhysicalToLogical(InFlightMetadataCollectorImpl.java:937) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl$TableColumnNameBinding.addBinding(InFlightMetadataCollectorImpl.java:906) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.addColumnNameBinding(InFlightMetadataCollectorImpl.java:976) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.addColumnNameBinding(InFlightMetadataCollectorImpl.java:957) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.cfg.Ejb3JoinColumn.addColumnBinding(Ejb3JoinColumn.java:799) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.cfg.Ejb3Column.linkWithValue(Ejb3Column.java:385) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.cfg.annotations.TableBinder.linkJoinColumnWithValueOverridingNameIfImplicit(TableBinder.java:720) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.cfg.annotations.TableBinder.bindFk(TableBinder.java:649) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:105) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1750) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1694) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1623) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	... 16 common frames omitted
+
+2022-12-17 18:25:29.363  INFO 8372 --- [main] c.e.w.WebSeviceDemoApplication           : Starting WebSeviceDemoApplication using Java 11.0.13 on chaemyeongjeong-ui-MacBookAir.local with PID 8372 (/Users/chaemyeongjeong/IdeaProjects/web-service-demo/build/classes/java/main started by chaemyeongjeong in /Users/chaemyeongjeong/IdeaProjects/web-service-demo)
+2022-12-17 18:25:29.367  INFO 8372 --- [main] c.e.w.WebSeviceDemoApplication           : The following 1 profile is active: "local"
+2022-12-17 18:25:29.409  WARN 8372 --- [main] o.s.b.c.config.ConfigDataEnvironment     : Property 'spring.profiles' imported from location 'class path resource [real-application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [real-application.yml] - 2:13]
+2022-12-17 18:25:30.283  INFO 8372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-17 18:25:30.331  INFO 8372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
+2022-12-17 18:25:30.834  INFO 8372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-17 18:25:30.841  INFO 8372 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-17 18:25:30.841  INFO 8372 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-17 18:25:31.002  INFO 8372 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-17 18:25:31.003  INFO 8372 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1592 ms
+2022-12-17 18:25:31.284  INFO 8372 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-17 18:25:31.305  INFO 8372 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2022-12-17 18:25:31.371  INFO 8372 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-17 18:25:31.423  INFO 8372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-17 18:25:31.692  INFO 8372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-17 18:25:31.700  INFO 8372 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-12-17 18:25:32.184  INFO 8372 --- [main] p6spy                                    : #1671269132184 | took 37ms | statement | connection 1| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd
+
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd;
+2022-12-17 18:25:32.188  WARN 8372 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at com.example.websevicedemo.WebSeviceDemoApplication.main(WebSeviceDemoApplication.java:10) ~[main/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'cyworld.re_comment' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at com.p6spy.engine.wrapper.StatementWrapper.execute(StatementWrapper.java:114) ~[p6spy-3.8.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	... 35 common frames omitted
+
+2022-12-17 18:25:32.195  INFO 8372 --- [main] p6spy                                    : #1671269132195 | took 6ms | statement | connection 1| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists comment
+
+    drop table if exists comment;
+2022-12-17 18:25:32.207  INFO 8372 --- [main] p6spy                                    : #1671269132207 | took 1ms | statement | connection 1| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists re_comment
+
+    drop table if exists re_comment;
+2022-12-17 18:25:32.236  INFO 8372 --- [main] p6spy                                    : #1671269132236 | took 26ms | statement | connection 2| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table comment (
+       id bigint not null auto_increment,
+        crated_at datetime(6),
+        updated_at datetime(6),
+        comment varchar(255),
+        reply_id varchar(255),
+        reply_pwd varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+
+    create table comment (
+       id bigint not null auto_increment,
+        crated_at datetime(6),
+        updated_at datetime(6),
+        comment varchar(255),
+        reply_id varchar(255),
+        reply_pwd varchar(255),
+        primary key (id)
+    ) engine=InnoDB;
+2022-12-17 18:25:32.241  INFO 8372 --- [main] p6spy                                    : #1671269132241 | took 3ms | statement | connection 2| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table re_comment (
+       id bigint not null auto_increment,
+        crated_at datetime(6),
+        updated_at datetime(6),
+        re_comment varchar(255),
+        reply_id varchar(255),
+        reply_pwd varchar(255),
+        comment_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+
+    create table re_comment (
+       id bigint not null auto_increment,
+        crated_at datetime(6),
+        updated_at datetime(6),
+        re_comment varchar(255),
+        reply_id varchar(255),
+        reply_pwd varchar(255),
+        comment_id bigint,
+        primary key (id)
+    ) engine=InnoDB;
+2022-12-17 18:25:32.260  INFO 8372 --- [main] p6spy                                    : #1671269132260 | took 18ms | statement | connection 2| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table re_comment 
+       add constraint FKlbau13r2qs2dvla5g9k3xnmpd 
+       foreign key (comment_id) 
+       references comment (id)
+
+    alter table re_comment 
+       add constraint FKlbau13r2qs2dvla5g9k3xnmpd 
+       foreign key (comment_id) 
+       references comment (id);
+2022-12-17 18:25:32.262  INFO 8372 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-17 18:25:32.268  INFO 8372 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17 18:25:32.853  WARN 8372 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-17 18:25:32.988  INFO 8372 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-12-17 18:25:33.158  INFO 8372 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-12-17 18:25:33.272  INFO 8372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-17 18:25:33.273  INFO 8372 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-12-17 18:25:33.281  INFO 8372 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-12-17 18:25:33.294  INFO 8372 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-12-17 18:25:33.451  INFO 8372 --- [main] c.e.w.WebSeviceDemoApplication           : Started WebSeviceDemoApplication in 4.62 seconds (JVM running for 5.881)
+2022-12-17 18:25:40.247  INFO 8372 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-17 18:25:40.250  INFO 8372 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-17 18:25:40.257  INFO 8372 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-12-17 18:25:40.421  INFO 8372 --- [http-nio-8080-exec-2] p6spy                                    : #1671269140421 | took 17ms | statement | connection 3| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+insert into comment (crated_at, updated_at, comment, reply_id, reply_pwd) values (?, ?, ?, ?, ?)
+insert into comment (crated_at, updated_at, comment, reply_id, reply_pwd) values ('2022-12-17T18:25:40.367+0900', '2022-12-17T18:25:40.367+0900', '코멘트', NULL, NULL);
+2022-12-17 18:25:40.438  INFO 8372 --- [http-nio-8080-exec-2] p6spy                                    : #1671269140438 | took 1ms | commit | connection 3| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+;
+2022-12-17 18:26:08.218  INFO 8372 --- [http-nio-8080-exec-3] p6spy                                    : #1671269168218 | took 5ms | statement | connection 4| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+insert into comment (crated_at, updated_at, comment, reply_id, reply_pwd) values (?, ?, ?, ?, ?)
+insert into comment (crated_at, updated_at, comment, reply_id, reply_pwd) values ('2022-12-17T18:26:08.208+0900', '2022-12-17T18:26:08.208+0900', '코멘트', NULL, NULL);
+2022-12-17 18:26:08.224  INFO 8372 --- [http-nio-8080-exec-3] p6spy                                    : #1671269168224 | took 1ms | commit | connection 4| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+;
+2022-12-17 18:26:22.690  INFO 8372 --- [http-nio-8080-exec-4] p6spy                                    : #1671269182690 | took 1ms | statement | connection 5| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+insert into comment (crated_at, updated_at, comment, reply_id, reply_pwd) values (?, ?, ?, ?, ?)
+insert into comment (crated_at, updated_at, comment, reply_id, reply_pwd) values ('2022-12-17T18:26:22.685+0900', '2022-12-17T18:26:22.685+0900', '코멘트', '댓글 id', '댓글 비번');
+2022-12-17 18:26:22.697  INFO 8372 --- [http-nio-8080-exec-4] p6spy                                    : #1671269182697 | took 1ms | commit | connection 5| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+;
