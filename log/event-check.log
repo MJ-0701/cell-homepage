@@ -815,3 +815,26 @@ insert into comment (crated_at, updated_at, comment, reply_id, reply_pwd) values
 2022-12-17 18:26:22.697  INFO 8372 --- [http-nio-8080-exec-4] p6spy                                    : #1671269182697 | took 1ms | commit | connection 5| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
 
 ;
+2022-12-17 18:44:22.939  INFO 8372 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-17 18:44:22.942  INFO 8372 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-12-17 18:44:23.037  INFO 8372 --- [SpringApplicationShutdownHook] p6spy                                    : #1671270263037 | took 90ms | statement | connection 6| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd
+
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd;
+2022-12-17 18:44:23.044  INFO 8372 --- [SpringApplicationShutdownHook] p6spy                                    : #1671270263044 | took 6ms | statement | connection 6| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists comment
+
+    drop table if exists comment;
+2022-12-17 18:44:23.048  INFO 8372 --- [SpringApplicationShutdownHook] p6spy                                    : #1671270263048 | took 3ms | statement | connection 6| url jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists re_comment
+
+    drop table if exists re_comment;
+2022-12-17 18:44:23.053  INFO 8372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-17 18:44:23.070  INFO 8372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
