@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIARY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f519fae98b.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/diary.css">
+
+</head>
+<body>
+<div class="bookcover">
+    <div class="bookdot">
+        <div class="page">
+            <div class="left-container">
+                <div class="left-visits">
+                    <p>TODAY <span style="color: red;">25</span> | TOTAL 191207</p>
+                </div>
+                <div class="left-box">
+                    <img class="profile-img" src="./images/cat.gif" alt="profile image" />
+                    <div class="profile">
+                        <p>
+                            너밖에 없어서<br>
+                            널 사랑한게 아니라<br>
+                            널 사랑하다보니 너밖에 없더라.<br>
+                            <br>
+                            귀여니 - 늑대의 유혹
+                        </p>
+                        <div class="profile-name">요닝 (♀)</div>
+                        <div class="dropdown">
+                            <select name="padotagi" class="padotagi">
+                                <option value="none" selected disabled hidden>파도타기</option>
+                                <option value="blog"><a href="#">블로그로 가기</a></option>
+                                <option value="github"><a href="#">GitHub으로 가기</a></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-container">
+                <div class="middle-title">
+                    <div class="middle-desc">웃ㅈr, 네 ㅁiЧ홈㉬ㅣ 제목ぇㅓ럼.</div>
+                    <div class="middle-url">https://cyworld.com/yoni</div>
+                </div>
+                <div class="middle-box">
+
+                    <div class="diary-container">
+                        <div class="diary-box">
+                            <div class="diary-date" id="bible-date"></div>
+                            <div class="diary-txt" id="bible-contents">
+
+                            </div>
+                        </div>
+                        <button class="diary-button" onclick="getTodayBible()"><i class="fa-solid fa-lock"></i>하루 묵상</button>
+                    </div>
+                    <button class="diary-button" onclick="getMinuteBible()"><i class="fa-solid fa-lock"></i>1분 묵상</button>
+
+                </div>
+            </div>
+
+
+            <div class="right-container">
+                <div class="menu-wrap">
+                    <div onclick="location.href='/'" class="menu">홈</div>
+                    <div onclick="location.href='/diary'" class="menu">다이어리</div>
+                    <div onclick="location.href='/photo-book'" class="menu">사진첩</div>
+                    <div onclick="location.href='/guest-book'" class="menu">방명록</div>
+                    <div onclick="location.href='/today-bible'" class="menu">성경 묵상</div>
+                    <div onclick="location.href='/minute-bible'" class="menu">1분 묵상</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function getMinuteBible() {
+        let today = new Date();
+        let day = ['일', '월', '화', '수', '목', '금', '토'];
+        let dateFormat1 = today.getFullYear() + '년 ' + (today.getMonth()+1) + '월 '
+            + today.getDate() + '일 ' + day[today.getDay()] + '요일 '
+            + today.getHours() + '시 ' + today.getMinutes() + '분 '
+
+        let bibleTitle = ['ge','exo','lev', 'num', 'deu', 'josh', 'jdgs', 'ruth', '1sm', '2sm', '1ki', '2ki', '1chr', '2chr',
+            'ezra', 'neh', 'est', 'job', 'psa', 'prv', 'eccl', 'ssol', 'isa', 'jer', 'lam', 'eze', 'dan', 'hos', 'joel', 'amos',
+            'obad', 'jonah', 'mic', 'nahum', 'hab', 'zep', 'hag', 'zec', 'mal','mat','mark','luke','john','acts','rom','1cor','2cor',
+            'gal','eph','phi','col','1th','2th','1tim','2tim','titus','phmn','heb','jas','1pet','2pet','1jin','2jin','3jin','jude','rev'
+        ]
+
+        let random = bibleTitle[Math.floor(Math.random() * bibleTitle.length)] ;
+
+        let doc = random
+        let start = "1:1"
+        let end = "1:1"
+
+        let url = 'https://yesu.io/bible?lang=kor&doc='+doc+'&start='+start+'&end='+end
+
+        $.ajax({
+            type : 'GET',
+            url : url,
+            dataType : 'json'
+
+        }).done(function (data) {
+            console.log(doc);
+            $.each(data, function (index, item) {
+                $("#bible-date").append(dateFormat1, "");
+                $("#bible-contents").append(item.chapter, "");
+                $("#bible-contents").append(item.verse, "");
+                $("#bible-contents").append(item.message, + "<br>");
+            });
+        }).fail(function (error) {
+            alert(url);
+            alert("에러");
+            alert(JSON.stringify(error));
+        });
+
+    }
+
+    function getTodayBible() {
+        let today = new Date();
+        let day = ['일', '월', '화', '수', '목', '금', '토'];
+        let dateFormat1 = today.getFullYear() + '년 ' + (today.getMonth()+1) + '월 '
+            + today.getDate() + '일 ' + day[today.getDay()] + '요일 '
+            + today.getHours() + '시 ' + today.getMinutes() + '분 '
+
+        let bibleTitle = ['ge','exo','lev', 'num', 'deu', 'josh', 'jdgs', 'ruth', '1sm', '2sm', '1ki', '2ki', '1chr', '2chr',
+            'ezra', 'neh', 'est', 'job', 'psa', 'prv', 'eccl', 'ssol', 'isa', 'jer', 'lam', 'eze', 'dan', 'hos', 'joel', 'amos',
+            'obad', 'jonah', 'mic', 'nahum', 'hab', 'zep', 'hag', 'zec', 'mal','mat','mark','luke','john','acts','rom','1cor','2cor',
+            'gal','eph','phi','col','1th','2th','1tim','2tim','titus','phmn','heb','jas','1pet','2pet','1jin','2jin','3jin','jude','rev'
+        ]
+
+        let random = bibleTitle[Math.floor(Math.random() * bibleTitle.length)] ;
+
+        let doc = random
+        let start = "1:1"
+        let end = "1:1"
+
+        let url = 'https://yesu.io/bible?lang=kor&doc='+doc+'&start='+start+'&end='+end
+
+        $.ajax({
+            type : 'GET',
+            url : url,
+            dataType : 'json'
+
+        }).done(function (data) {
+            $.each(data, function (index, item) {
+               $("#bible-date").set(dateFormat1, "");
+               $("#bible-contents").append(item.chapter, "");
+               $("#bible-contents").append(item.verse, "");
+               $("#bible-contents").append(item.message, + "<br>");
+            });
+        }).fail(function (error) {
+            alert(url);
+            alert("에러");
+            alert(JSON.stringify(error));
+        });
+    }
+
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

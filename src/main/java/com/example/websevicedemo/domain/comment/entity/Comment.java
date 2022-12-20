@@ -1,5 +1,6 @@
 package com.example.websevicedemo.domain.comment.entity;
 
+import com.example.websevicedemo.domain.board.entity.Board;
 import com.example.websevicedemo.global.entity.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,6 +30,10 @@ public class Comment extends BaseEntity {
 
     @OneToMany(mappedBy = "comment", orphanRemoval = true, cascade = {CascadeType.ALL})
     private List<ReComment> reCommentList = new ArrayList<>();
+
+    @ManyToOne
+    @JoinColumn(name = "board_id")
+    private Board board;
 
 
 }

@@ -1,0 +1,194 @@
+@media (max-width: 767px){
+    /*모바일*/
+    .middle-box .date-container {
+        margin: 15px;
+        height: 60px;
+        border: 1px solid rgb(220, 220, 220);
+        display: flex;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .date-container .today-date {
+        font-family: 'NeoDunggeunmo';
+        color: rgb(89,142,176);
+        font-weight: bold;
+        font-size: 18px;
+        flex: 0.1;
+        padding: 2px;
+        box-sizing: border-box;
+    }
+    .date-container .calendar {
+        flex: 0.9;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: 'NeoDunggeunmo';
+        margin-left: 15px;
+    }
+    .date-container .calendar .day {
+        font-family: inherit;
+        color: rgb(126, 121, 114);
+        margin-right: 6px;
+        width: 20px;
+        height: 20px;
+    }
+    .date-container .calendar .sat {
+        font-family: inherit;
+        color: blue;
+        margin-right: 6px;
+        width: 20px;
+        height: 20px;
+    }
+    .date-container .calendar .sun {
+        font-family: inherit;
+        color: red;
+        margin-right: 6px;
+        width: 20px;
+        height: 20px;
+    }
+    .middle-box .diary-container {
+        overflow-y: scroll;
+        margin: 15px;
+        height: 390px;
+    }
+    .diary-container .diary-box {
+        border: 1px solid rgb(220, 220, 220);
+        margin-bottom: 30px;
+    }
+    .diary-container .diary-box .diary-date {
+        font-family: 'NeoDunggeunmo';
+        color: rgb(89,142,176);
+        padding-top: 30px;
+        margin-left: 20px;
+    }
+    .diary-container .diary-box .diary-txt {
+        text-align: center;
+        margin: 30px 20px;
+    }
+    .diary-txt > p {
+        margin: 5px 20px;
+        font-family: 'KyoboHand';
+        font-size: 15px;
+
+
+    }
+    .middle-box .fa-lock {
+        margin-right: 10px;
+    }
+    .diary-button {
+        font-family: 'NeoDunggeunmo';
+        background-color: #fff;
+        padding: 15px;
+        border: none;
+        border-radius: 7px;
+        color: #fff;
+        display: block;
+        margin: 20px auto;
+    }
+    .diary-button:hover {
+        background-color: rgb(3,171,138);
+        transition: 1500ms;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /*테블릿 세로*/
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /*테블릿 가로*/
+}
+
+@media (min-width: 1200px) {
+    .middle-box .date-container {
+        margin: 15px;
+        height: 60px;
+        border: 1px solid rgb(220, 220, 220);
+        display: flex;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .date-container .today-date {
+        font-family: 'NeoDunggeunmo';
+        color: rgb(89,142,176);
+        font-weight: bold;
+        font-size: 18px;
+        flex: 0.1;
+        padding: 2px;
+        box-sizing: border-box;
+    }
+    .date-container .calendar {
+        flex: 0.9;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: 'NeoDunggeunmo';
+        margin-left: 15px;
+    }
+    .date-container .calendar .day {
+        font-family: inherit;
+        color: rgb(126, 121, 114);
+        margin-right: 6px;
+        width: 20px;
+        height: 20px;
+    }
+    .date-container .calendar .sat {
+        font-family: inherit;
+        color: blue;
+        margin-right: 6px;
+        width: 20px;
+        height: 20px;
+    }
+    .date-container .calendar .sun {
+        font-family: inherit;
+        color: red;
+        margin-right: 6px;
+        width: 20px;
+        height: 20px;
+    }
+    .middle-box .diary-container {
+        overflow-y: scroll;
+        margin: 15px;
+        height: 390px;
+    }
+    .diary-container .diary-box {
+        border: 1px solid rgb(220, 220, 220);
+        margin-bottom: 30px;
+    }
+    .diary-container .diary-box .diary-date {
+        font-family: 'NeoDunggeunmo';
+        color: rgb(89,142,176);
+        padding-top: 30px;
+        margin-left: 20px;
+    }
+    .diary-container .diary-box .diary-txt {
+        text-align: center;
+        margin: 30px 20px;
+    }
+    .diary-txt > p {
+        margin: 5px 20px;
+        font-family: 'KyoboHand';
+        font-size: 15px;
+
+
+    }
+    .middle-box .fa-lock {
+        margin-right: 10px;
+    }
+    .diary-button {
+        font-family: 'NeoDunggeunmo';
+        background-color: #fff;
+        padding: 15px;
+        border: none;
+        border-radius: 7px;
+        color: #fff;
+        display: block;
+        margin: 20px auto;
+    }
+    .diary-button:hover {
+        background-color: rgb(3,171,138);
+        transition: 1500ms;
+        cursor: pointer;
+    }
+}

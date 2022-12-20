@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHOTO-BOOK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/photoBook.css">
+
+
+</head>
+<body>
+<div class="bookcover">
+    <div class="bookdot">
+        <div class="page">
+            <div class="left-container">
+                <div class="left-visits">
+                    <p>TODAY <span style="color: red;">25</span> | TOTAL 191207</p>
+                </div>
+                <div class="left-box">
+                    <img class="profile-img" src="./images/cat.gif" alt="profile image" />
+                    <div class="profile">
+                        <p>
+                            너밖에 없어서<br>
+                            널 사랑한게 아니라<br>
+                            널 사랑하다보니 너밖에 없더라.<br>
+                            <br>
+                            귀여니 - 늑대의 유혹
+                        </p>
+                        <div class="profile-name">요닝 (♀)</div>
+                        <div class="dropdown">
+                            <select name="padotagi" class="padotagi">
+                                <option value="none" selected disabled hidden>파도타기</option>
+                                <option value="blog"><a href="#">블로그로 가기</a></option>
+                                <option value="github"><a href="#">GitHub으로 가기</a></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-container">
+                <div class="middle-title">
+                    <div class="middle-desc">웃ㅈr, 네 ㅁiЧ홈㉬ㅣ 제목ぇㅓ럼.</div>
+                    <div class="middle-url">https://cyworld.com/yoni</div>
+                </div>
+                <div class="middle-box">
+                    <div class="photo-wrap">
+                        <div class="photo-container">
+                            <div class="photo-title">
+                                <span>Test 사진 1</span>
+                            </div>
+                            <div style="width: auto">
+                                <img style="width: 100%" class="photo" src="./images/cat.gif" alt="photo1">
+                            </div>
+
+                            <div class="photo-desc">
+                                Test 사진 1 Description
+                            </div>
+                        </div>
+                        <div class="photo-container">
+                            <div class="photo-title">
+                                <span>Test 사진 2</span>
+                            </div>
+                            <div style="width: auto">
+                                <img style="width: 100%" class="photo" src="./images/cat.gif" alt="photo2">
+                            </div>
+
+                            <div class="photo-desc">
+                                Test 사진 2 Description
+                            </div>
+                        </div>
+                        <div class="photo-container">
+                            <div class="photo-title">
+                                <span>Test 사진 3</span>
+                            </div>
+                            <div style="width: auto">
+                                <img style="width: 100%" class="photo" src="./images/cat.gif" alt="photo3">
+                            </div>
+
+                            <div class="photo-desc">
+                                Test 사진 3 Description
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="menu-wrap">
+                    <div onclick="location.href='/'" class="menu">홈</div>
+                    <div onclick="location.href='/diary'" class="menu">다이어리</div>
+                    <div onclick="location.href='/photo-book'" class="menu">사진첩</div>
+                    <div onclick="location.href='/guest-book'" class="menu">방명록</div>
+                    <div onclick="location.href='/today-bible'" class="menu">성경 묵상</div>
+                    <div onclick="location.href='/minute-bible'" class="menu">1분 묵상</div>
+
+<!--                    <div class="menu" id="home">홈</div>-->
+<!--                    <div class="menu" id="diary">다이어리</div>-->
+<!--                    <div class="menu" id="photo-book">사진첩</div>-->
+<!--                    <div class="menu" id="guest-book">방명록</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
+

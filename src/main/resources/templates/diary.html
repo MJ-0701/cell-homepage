@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIARY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f519fae98b.js" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/diary.css">
+
+</head>
+<body>
+<div class="bookcover">
+  <div class="bookdot">
+    <div class="page">
+      <div class="left-container">
+        <div class="left-visits">
+          <p>TODAY <span style="color: red;">25</span> | TOTAL 191207</p>
+        </div>
+        <div class="left-box">
+          <img class="profile-img" src="./images/cat.gif" alt="profile image" />
+          <div class="profile">
+            <p>
+              너밖에 없어서<br>
+              널 사랑한게 아니라<br>
+              널 사랑하다보니 너밖에 없더라.<br>
+              <br>
+              귀여니 - 늑대의 유혹
+            </p>
+            <div class="profile-name">요닝 (♀)</div>
+            <div class="dropdown">
+              <select name="padotagi" class="padotagi">
+                <option value="none" selected disabled hidden>파도타기</option>
+                <option value="blog"><a href="#">블로그로 가기</a></option>
+                <option value="github"><a href="#">GitHub으로 가기</a></option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="middle-container">
+        <div class="middle-title">
+          <div class="middle-desc">웃ㅈr, 네 ㅁiЧ홈㉬ㅣ 제목ぇㅓ럼.</div>
+          <div class="middle-url">https://cyworld.com/yoni</div>
+        </div>
+        <div class="middle-box">
+          <div class="date-container">
+            <div class="today-date">02.21 MON</div>
+            <div class="calendar">
+              <div class="day">1</div>
+              <div class="day">2</div>
+              <div class="day">3</div>
+              <div class="day">4</div>
+              <div class="sat">5</div>
+              <div class="sun">6</div>
+              <div class="day">7</div>
+              <div class="day">8</div>
+              <div class="day">9</div>
+              <div class="day">10</div>
+              <div class="day">11</div>
+              <div class="sat">12</div>
+              <div class="sun">13</div>
+              <div class="day">14</div>
+              <div class="day">15</div>
+              <div class="day">16</div>
+              <div class="day">17</div>
+              <div class="day">18</div>
+              <div class="sat">19</div>
+              <div class="sun">20</div>
+              <div class="day">21</div>
+              <div class="day">22</div>
+              <div class="day">23</div>
+              <div class="day">24</div>
+              <div class="day">25</div>
+              <div class="sat">26</div>
+              <div class="sun">27</div>
+              <div class="day">28</div>
+            </div>
+          </div>
+          <div class="diary-container">
+            <div class="diary-box">
+              <div class="diary-date">2022.02.21 월 02:46</div>
+              <div class="diary-txt">
+                울 ㅈㅣ않ㄱㅣ
+                <br>ㅇㅏ프ㅈㅣ 않ㄱㅣ
+                <br>씩씩ㅎrㄱㅣ
+                <br>억ㅈㅣ로 ㄹr도 웃ㄱㅣ
+                <br>ㅌㅣㄴㅐㅈㅣ 말ㄱㅣ
+                <br>.
+                <br>.
+                <br>.
+                <br>오늘도 괜찮은듯
+                <br>그렇게 ㅈㅣㄴㅐㄱㅣ
+              </div>
+            </div>
+            <div class="diary-box">
+              <div class="diary-date">2022.02.18 금 21:37</div>
+              <div class="diary-txt">
+                난... ㄱ ㅏ끔...
+                <br>눈물을 흘린 ㄷ ㅏ ....
+                <br>ㄱ ㅏ끔은 눈물을 참을 수 없는 내가 별루ㄷ ㅏ...
+                <br>맘이 ㅇ ㅏ ㅍ ㅏ 서....
+                <br>소ㄹ ㅣ치며... 울 수 있 ㄷㅏ는건....
+                <br>좋은ㄱ ㅓ ㅇ ㅑ.....
+                <br>ㅁ ㅓ... 꼭 슬 ㅍ ㅓ ㅇ ㅑ만 우는 건 ㅇ ㅏ니잖 ㅇ ㅏ...^^
+                <br>난... 눈물ㅇ ㅣ ....좋다.....
+                <br>ㅇ ㅏ니...
+                <br>머 리가 ㅇ ㅏ닌.....
+                <br>맘으로.....우는 ㄴ ㅐㄱ ㅏ 좋ㄷ ㅏ.....
+              </div>
+            </div>
+            <button class="diary-button" onclick="getTextFile()"><i class="fa-solid fa-lock"></i>요닝의 비밀일기 보기</button>
+            <div class="diary-box" id="secret-box">
+              <div class="diary-date">비밀 일기</div>
+              <div class="diary-txt" id="secret-txt"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="menu-wrap">
+          <div onclick="location.href='/'" class="menu">홈</div>
+          <div onclick="location.href='/diary'" class="menu">다이어리</div>
+          <div onclick="location.href='/photo-book'" class="menu">사진첩</div>
+          <div onclick="location.href='/guest-book'" class="menu">방명록</div>
+          <div onclick="location.href='/today-bible'" class="menu">성경 묵상</div>
+          <div onclick="location.href='/minute-bible'" class="menu">1분 묵상</div>
+
+<!--          <div class="menu" id="home">홈</div>-->
+<!--          <div class="menu" id="diary">다이어리</div>-->
+<!--          <div class="menu" id="photo-book">사진첩</div>-->
+<!--          <div class="menu" id="guest-book">방명록</div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function getTextFile() {
+    // <input type="file" accept="text/plain" /> 과 같음
+    var input = document.createElement("input");
+    input.type = "file";
+    input.accept = "text/plain";
+    input.onchange = function (event) { // 파일 열기 버튼을 눌러서 파일이 추가되었을 때
+      processFile(event.target.files[0]);
+      // processFile이라는 함수가 실행되고,
+      // processFile 함수의 인자(file)로 파일을 넘겨줍니다.
+    };
+    input.click();
+  }
+
+
+  function processFile(file) {
+    var reader = new FileReader(); // 파일을 읽을 수 있는 reader를 만듦
+    reader.readAsText(file, "utf-8"); // 한글을 읽기 위함
+
+
+    reader.onload = function () { // reader가 파일을 읽으면
+      // text라는 id 를 가진 요소를 찾아
+      document.getElementById("secret-txt").innerText = reader.result;
+      // 해당 요소의 innerText , 즉 텍스트를 reader가 읽은 결과 텍스트로 대체
+      document.getElementById("secret-box").style.display="block"; // 텍스트를 불러온 뒤 display 하기
+    };
+  }
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

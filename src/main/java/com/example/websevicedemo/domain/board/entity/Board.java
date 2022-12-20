@@ -18,7 +18,6 @@ import java.util.List;
 @Entity
 @Getter
 @NoArgsConstructor
-@Builder
 public class Board extends BaseEntity {
 
     private String title;
@@ -50,6 +49,17 @@ public class Board extends BaseEntity {
         this.password = password;
         this.likeCount = likeCount;
         this.declaration = declaration;
+    }
+
+    // Board에서 파일 처리 위함.
+    public void addFiles(Files files){
+        this.files.add(files);
+
+        // 게시글에 파일이 저장되어있지 않은 경우
+        if(files.getBoard() != this){
+            // 파일 저장
+            files.setBoard(this);
+        }
     }
 
 }
