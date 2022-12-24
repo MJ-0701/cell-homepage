@@ -75,16 +75,16 @@
 }
 .diary-button {
     font-family: 'NeoDunggeunmo';
-    background-color: #fff;
+    background-color: rgb(3,171,138);
     padding: 15px;
     border: none;
     border-radius: 7px;
     color: #fff;
-    display: block;
+    /*display: block;*/
     margin: 20px auto;
 }
 .diary-button:hover {
-    background-color: rgb(3,171,138);
+    /*background-color: rgb(3,171,138);*/
     transition: 1500ms;
     cursor: pointer;
 }

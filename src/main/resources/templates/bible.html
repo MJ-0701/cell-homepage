@@ -55,14 +55,13 @@
                     <div class="diary-container">
                         <div class="diary-box">
                             <div class="diary-date" id="bible-date"></div>
+                            <div class="diary-date" id="bible-doc"></div>
                             <div class="diary-txt" id="bible-contents">
 
                             </div>
                         </div>
-                        <button class="diary-button" onclick="getTodayBible()"><i class="fa-solid fa-lock"></i>하루 묵상</button>
+                        <button class="diary-button" onclick="getMinuteBible()"><i class="fa-solid fa-lock"></i>1분 묵상</button>
                     </div>
-                    <button class="diary-button" onclick="getMinuteBible()"><i class="fa-solid fa-lock"></i>1분 묵상</button>
-
                 </div>
             </div>
 
@@ -74,7 +73,6 @@
                     <div onclick="location.href='/photo-book'" class="menu">사진첩</div>
                     <div onclick="location.href='/guest-book'" class="menu">방명록</div>
                     <div onclick="location.href='/today-bible'" class="menu">성경 묵상</div>
-                    <div onclick="location.href='/minute-bible'" class="menu">1분 묵상</div>
                 </div>
             </div>
         </div>
@@ -84,6 +82,265 @@
 
 <script>
     function getMinuteBible() {
+        let today = new Date();
+        let day = ['일', '월', '화', '수', '목', '금', '토'];
+        let dateFormat1 = today.getFullYear() + '년 ' + (today.getMonth()+1) + '월 '
+            + today.getDate() + '일 ' + day[today.getDay()] + '요일 '
+            + today.getHours() + '시 ' + today.getMinutes() + '분 '
+
+        let bibleTitle = ['ge','exo','lev', 'num', 'deu', 'josh', 'jdgs', 'ruth', '1sm', '2sm', '1ki', '2ki', '1chr', '2chr',
+            'ezra', 'neh', 'est', 'job', 'psa', 'prv', 'eccl', 'ssol', 'isa', 'jer', 'lam', 'eze', 'dan', 'hos', 'joel', 'amos',
+            'obad', 'jonah', 'mic', 'nahum', 'hab', 'zep', 'hag', 'zec', 'mal','mat','mark','luke','john','acts','rom','1cor','2cor',
+            'gal','eph','phi','col','1th','2th','1tim','2tim','titus','phmn','heb','jas','1pet','2pet','1jin','2jin','3jin','jude','rev'
+        ]
+
+        let random = bibleTitle[Math.floor(Math.random() * bibleTitle.length)] ;
+
+        let korDoc = "";
+
+
+
+        let chapterRand = Math.floor(Math.random() * 50) + 1 // 1 ~ 50
+        let verseRand = Math.floor(Math.random() * 50) + 1 // 1 ~ 50
+
+        let doc = random
+        let start = chapterRand + ":" + verseRand
+        let end = chapterRand + ":" + verseRand
+
+        const bibleDate = document.getElementById("bible-date");
+        const bibleDoc = document.getElementById("bible-doc");
+        const bibleContents = document.getElementById("bible-contents");
+
+        switch (doc) {
+            case 'ge' :
+                korDoc = "창세기"
+                break;
+            case 'exo':
+                korDoc = "출애굽기"
+                break;
+            case 'lev':
+                korDoc = "레위기"
+                break;
+            case 'num':
+                korDoc = "민수기"
+                break;
+            case 'deu':
+                korDoc = "신명기"
+                break;
+            case 'josh':
+                korDoc = "여호수와"
+                break;
+            case 'jdgs':
+                korDoc = "사사기"
+                break;
+            case 'ruth':
+                korDoc = "룻기"
+                break;
+            case '1sm':
+                korDoc = "사무엘상"
+                break;
+            case '2sm':
+                korDoc = "사무엘하"
+                break;
+            case '1ki':
+                korDoc = "열왕기상"
+                break;
+            case '2ki':
+                korDoc = "열왕기하"
+                break;
+            case '1chr':
+                korDoc = "역대상"
+                break;
+            case '2chr':
+                korDoc = "역대하"
+                break;
+            case 'ezra':
+                korDoc = "에스라"
+                break;
+            case 'neh':
+                korDoc = "느헤미야"
+                break;
+            case 'est':
+                korDoc = "에스더"
+                break;
+            case 'job':
+                korDoc = "욥기"
+                break;
+            case 'psa':
+                korDoc = "시편"
+                break;
+            case 'prv':
+                korDoc = "잠언"
+                break;
+            case 'eccl':
+                korDoc = "전도서"
+                break;
+            case 'ssol':
+                korDoc = "아가"
+                break;
+            case 'isa':
+                korDoc = "이사야"
+                break;
+            case 'jer':
+                korDoc = "예레미야"
+                break;
+            case 'lam':
+                korDoc = "에레미야애가"
+                break;
+            case 'eze':
+                korDoc = "에스겔"
+                break;
+            case 'dan':
+                korDoc = "다니엘"
+                break;
+            case 'hos':
+                korDoc = "호세아"
+                break;
+            case 'joel':
+                korDoc = "요엘"
+                break;
+            case 'amos':
+                korDoc = "아모스"
+                break;
+            case 'obad':
+                korDoc = "오바댜"
+                break;
+            case 'jonah':
+                korDoc = "요나"
+                break;
+            case 'mic':
+                korDoc = "미가"
+                break;
+            case 'nahum':
+                korDoc = "나훔"
+                break;
+            case 'hab':
+                korDoc = "하박국"
+                break;
+            case 'zep':
+                korDoc = "스바냐"
+                break;
+            case 'hag':
+                korDoc = "학개"
+                break;
+            case 'zec':
+                korDoc = "스가랴"
+                break;
+            case 'mal':
+                korDoc = "말라기"
+                break;
+            case 'mat':
+                korDoc = "마태복음"
+                break;
+            case 'mark':
+                korDoc = "마가복음"
+                break;
+            case 'luke':
+                korDoc = "누가복음"
+                break;
+            case 'john':
+                korDoc = "요한복음"
+                break;
+            case 'acts':
+                korDoc = "사도행전"
+                break;
+            case 'rom':
+                korDoc = "로마서"
+                break;
+            case '1cor':
+                korDoc = "고린도전서"
+                break;
+            case '2cor':
+                korDoc = "고린도후서"
+                break;
+            case 'gal':
+                korDoc = "갈라디아서"
+                break;
+            case 'eph':
+                korDoc = "에베소서"
+                break;
+            case 'phi':
+                korDoc = "빌립보서"
+                break;
+            case 'col':
+                korDoc = "골로새서"
+                break;
+            case '1th':
+                korDoc = "데살로니가전서"
+                break;
+            case '2th':
+                korDoc = "데살로니가후서"
+                break;
+            case '1tim':
+                korDoc = "디모데전서"
+                break;
+            case '2tim':
+                korDoc = "디모데후서"
+                break;
+            case 'titus':
+                korDoc = "디도서"
+                break;
+            case 'phmn':
+                korDoc = "빌레몬서"
+                break;
+            case 'heb':
+                korDoc = "히브리서"
+                break;
+            case 'jas':
+                korDoc = "야고보서"
+                break;
+            case '1pet':
+                korDoc = "베드로전서"
+                break;
+            case '2pet':
+                korDoc = "베드로후서"
+                break;
+            case '1jin':
+                korDoc = "요한1서"
+                break;
+            case '2jin':
+                korDoc = "요한2서"
+                break;
+            case '3jin':
+                korDoc = "요한3서"
+                break;
+            case 'jude':
+                korDoc = "유다서"
+                break;
+            case 'rev':
+                korDoc = "요한계시록"
+                break;
+        }
+
+        let url = 'https://yesu.io/bible?lang=kor&doc='+doc+'&start='+start+'&end='+end
+
+        $.ajax({
+            type : 'GET',
+            url : url,
+            dataType : 'json'
+
+        }).done(function (data) {
+            console.log(doc);
+            console.log(korDoc);
+            $.each(data, function (index, item) {
+                // $("#bible-date").append(dateFormat1, "");
+                bibleDate.innerHTML = dateFormat1
+                bibleDoc.innerHTML = korDoc
+                // $("#bible-contents").append(item.chapter, "");
+                // $("#bible-contents").append(item.verse, "");
+                // $("#bible-contents").append(item.message, + "<br>");
+                bibleContents.innerHTML = `<p><strong>${item.chapter}:${item.verse}</strong> ${item.message}</p>`
+            });
+        }).fail(function (error) {
+            // alert(url);
+            // alert("에러");
+            // alert(JSON.stringify(error));
+            getMinuteBible()
+        });
+
+    }
+
+    function getTodayBible() {
         let today = new Date();
         let day = ['일', '월', '화', '수', '목', '금', '토'];
         let dateFormat1 = today.getFullYear() + '년 ' + (today.getMonth()+1) + '월 '
@@ -122,48 +379,9 @@
             alert("에러");
             alert(JSON.stringify(error));
         });
-
     }
 
-    function getTodayBible() {
-        let today = new Date();
-        let day = ['일', '월', '화', '수', '목', '금', '토'];
-        let dateFormat1 = today.getFullYear() + '년 ' + (today.getMonth()+1) + '월 '
-            + today.getDate() + '일 ' + day[today.getDay()] + '요일 '
-            + today.getHours() + '시 ' + today.getMinutes() + '분 '
 
-        let bibleTitle = ['ge','exo','lev', 'num', 'deu', 'josh', 'jdgs', 'ruth', '1sm', '2sm', '1ki', '2ki', '1chr', '2chr',
-            'ezra', 'neh', 'est', 'job', 'psa', 'prv', 'eccl', 'ssol', 'isa', 'jer', 'lam', 'eze', 'dan', 'hos', 'joel', 'amos',
-            'obad', 'jonah', 'mic', 'nahum', 'hab', 'zep', 'hag', 'zec', 'mal','mat','mark','luke','john','acts','rom','1cor','2cor',
-            'gal','eph','phi','col','1th','2th','1tim','2tim','titus','phmn','heb','jas','1pet','2pet','1jin','2jin','3jin','jude','rev'
-        ]
-
-        let random = bibleTitle[Math.floor(Math.random() * bibleTitle.length)] ;
-
-        let doc = random
-        let start = "1:1"
-        let end = "1:1"
-
-        let url = 'https://yesu.io/bible?lang=kor&doc='+doc+'&start='+start+'&end='+end
-
-        $.ajax({
-            type : 'GET',
-            url : url,
-            dataType : 'json'
-
-        }).done(function (data) {
-            $.each(data, function (index, item) {
-               $("#bible-date").set(dateFormat1, "");
-               $("#bible-contents").append(item.chapter, "");
-               $("#bible-contents").append(item.verse, "");
-               $("#bible-contents").append(item.message, + "<br>");
-            });
-        }).fail(function (error) {
-            alert(url);
-            alert("에러");
-            alert(JSON.stringify(error));
-        });
-    }
 
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

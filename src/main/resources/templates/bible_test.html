@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEST</title>
+
+  <style>
+
+    h1 {margin-bottom:0;}
+    span {display:block;margin-bottom:30px;}
+    div {margin-bottom: 10px;}
+    label {display:inline-block;min-width:80px;}
+    textarea {width:550px;}
+
+    .bible-result {border:1px solid #ddd;padding:20px;}
+  </style>
+</head>
+<body>
+  <h1>성경 API</h1>
+  <span>
+    '모든 성경은 하나님의 감동으로 된 것으로 교훈과 책망과 바르게 함과 의로 교육하기에 유익하니'
+    <small>(디모데후서 3:16)</small>
+  </span>
+
+  <div>
+    <label for="bible-lang">언어선택</label>
+    <select name="bible-lang" id="bibleLang" onchange="updateURL()">
+      <option value="cus">cus (Chinese Union Simplified 简体和合本)</option>
+      <option value="cut">cut (Chinese Union Traditional 繁體和合本)</option>
+      <option value="asv">asv (English American Standard Version)</option>
+      <option value="bbe">bbe (English Bible in Basic English)</option>
+      <option value="kjv">kjv (English King James Version)</option>
+      <option value="niv">niv (English New International Version)</option>
+      <option value="gmv">gmv (Greek Modern Version σύγχρονη εκδοχή)</option>
+      <option value="lxx">lxx (Greek Septuagint Version Εβδομήκοντα εκδοχή)</option>
+      <option value="gtr">gtr (Greek Textus Receptus Κείμενο Αποδεκτές)</option>
+      <option value="gwh">gwh (Greek Westcott Hort 1881 NA27/UBS4 με παρα λλαγές)</option>
+      <option value="hmv">hmv (Hebrew Modern Version הגרסה מודרנית)</option>
+      <option value="hac">hac (Hebrew Aleppo Codex כֶּתֶר אֲרָם צוֹבָא)</option>
+      <option value="bhs">bhs (Hebrew Biblia Hebraica Stuttgartensia הבראיקה)</option>
+      <option value="hwl">hwl (Hebrew Westminster Leningrad Codex וסטמינסטר לנינגרד קודקס)</option>
+      <option value="lvc">lvc (Latin Vulgata Clementina Vulgatae Clementina)</option>
+      <option value="lvn">lvn (Latin New Vulgata Nova Vulgatae)</option>
+      <option value="fda">fda (French Français Darby)</option>
+      <option value="fdm">fdm (French Français David Martin)</option>
+      <option value="fos">fos (French Français Ostervald)</option>
+      <option value="lsg">lsg (French Français Louis Segond)</option>
+      <option value="glm">glm (German Deutsch Luther Modern)</option>
+      <option value="glo">glo (German Deutsch Luther Original)</option>
+      <option value="gel">gel (German Deutsch Elberfelder)</option>
+      <option value="gsc">gsc (German Deutsch Schlachter)</option>
+      <option value="jcl">jcl (Japanese Classical 文語訳)</option>
+      <option value="jco">jco (Japanese Colloquial 口語訳)</option>
+      <option value="kor" selected="">kor (Korean 한국어 성경)</option>
+    </select>
+  </div>
+
+<div>
+  <label for="bible-doc">문서선택</label>
+  <select name="bible-doc" id="bibleDoc" onchange="updateURL()">
+    <option value="ge">ge (창세기)</option>
+    <option value="exo">exo (출애굽기)</option>
+    <option value="lev">lev (레위기)</option>
+    <option value="num">num (민수기)</option>
+    <option value="deu">deu (신명기)</option>
+    <option value="josh">josh (여호수아)</option>
+    <option value="jdgs">jdgs (사사기)</option>
+    <option value="ruth">ruth (룻기)</option>
+    <option value="1sm">1sm (사무엘상)</option>
+    <option value="2sm">2sm (사무엘하)</option>
+    <option value="1ki">1ki (열왕기상)</option>
+    <option value="2ki">2ki (열왕기하)</option>
+    <option value="1chr">1chr (역대상)</option>
+    <option value="2chr">2chr (역대하)</option>
+    <option value="ezra">ezra (에스라)</option>
+    <option value="neh">neh (느헤미야)</option>
+    <option value="est">est (에스더)</option>
+    <option value="job">job (욥기)</option>
+    <option value="psa">psa (시편)</option>
+    <option value="prv">prv (잠언)</option>
+    <option value="eccl">eccl (전도서)</option>
+    <option value="ssol">ssol (아가)</option>
+    <option value="isa">isa (이사야)</option>
+    <option value="jer">jer (예레미야)</option>
+    <option value="lam">lam (예레미야 애가)</option>
+    <option value="eze">eze (에스겔)</option>
+    <option value="dan">dan (다니엘)</option>
+    <option value="hos">hos (호세아)</option>
+    <option value="joel">joel (요엘)</option>
+    <option value="amos">amos (아모스)</option>
+    <option value="obad">obad (오바댜)</option>
+    <option value="jonah">jonah (요나)</option>
+    <option value="mic">mic (미가)</option>
+    <option value="nahum">nahum (나훔)</option>
+    <option value="hab">hab (하박국)</option>
+    <option value="zep">zep (스바냐)</option>
+    <option value="hag">hag (학개)</option>
+    <option value="zep">zep (스가랴)</option>
+    <option value="mal">mal (말라기)</option>
+    <option value="mat">mat (마태복음)</option>
+    <option value="mark">mark 마가복음)</option>
+    <option value="luke">luke (누가복음)</option>
+    <option value="john">john (요한복음)</option>
+    <option value="acts">acts (사도행전)</option>
+    <option value="rom">rom (로마서)</option>
+    <option value="1cor">1cor (고린도전서)</option>
+    <option value="2cor">2cor (고린도후서)</option>
+    <option value="gal">gal (갈라디아서)</option>
+    <option value="eph">eph (에베소서)</option>
+    <option value="phi">phi (빌립보서)</option>
+    <option value="col">col (골로새서)</option>
+    <option value="1th">1th (데살로니가전서)</option>
+    <option value="2th">2th (데살로니가후서)</option>
+    <option value="1tim">1tim (디모데전서)</option>
+    <option value="2tim">2tim (디모데후서)</option>
+    <option value="titus">titus (디도서)</option>
+    <option value="phmn">phmn (빌레몬서)</option>
+    <option value="heb">heb (히브리서)</option>
+    <option value="jas">jas (야고보서)</option>
+    <option value="1pet">1pet (베드로전서)</option>
+    <option value="2pet">2pet (베드로후서)</option>
+    <option value="1jn">1jn (요한1서)</option>
+    <option value="2jn">2jn (요한2서)</option>
+    <option value="3jn">3jn (요한3서)</option>
+    <option value="jude">jude (유다서)</option>
+    <option value="rev">rev (요한계시록)</option>
+  </select>
+</div>
+
+  <div>
+    <label for="">시작위치</label>
+    <input type="number" name="" id="bibleStartChapter" placeholder="장(Chapter)" value="1" onchange="updateURL()">
+    <input type="number" name="" id="bibleStartVerse" placeholder="절(Verse)" value="1" onchange="updateURL()">
+  </div>
+
+  <div>
+    <label for="">종료위치</label>
+    <input type="number" name="" id="bibleEndChapter" placeholder="장(Chapter)" value="2" onchange="updateURL()">
+    <input type="number" name="" id="bibleEndVerse" placeholder="절(Verse)" value="5" onchange="updateURL()">
+  </div>
+
+  <div>
+    <label for="bible-url">API URL</label>
+    <input name="bible-url" id="bibleURL" type="text" style="width:400px;" value="https://yesu.io/bible?lang=kor&amp;doc=ge&amp;start=1:1&amp;end=2:5">
+    <input type="button" value="API 호출" onclick="getBible()">
+  </div>
+
+  <div class="bible-result">
+    <h3>JSON 결과</h3>
+    <textarea name="" id="bibleResultJson" cols="30" rows="10"></textarea>
+  </div>
+
+  <div id="bibleResultText" class="bible-result">
+    <h3>텍스트 결과</h3>
+  </div>
+
+  <script>
+    function getBible(){
+      let bibleLang = $("#bibleLang").val();
+      let bibleDoc = $("#bibleDoc").val()
+      let bibleStartChapter = $("#bibleStartChapter").val()
+      let bibleStartVerse = $("#bibleStartVerse").val()
+      let bibleEndChapter = $("#bibleEndChapter").val()
+      let bibleEndVerse = $("#bibleEndVerse").val()
+
+      const bibleResultJson = document.getElementById("bibleResultJson");
+      const bibleResultText = document.getElementById("bibleResultText");
+
+
+
+      let op = {
+        lang: bibleLang,
+        doc: bibleDoc,
+        start: bibleStartChapter+":"+bibleStartVerse,
+        end: bibleEndChapter+":"+bibleEndVerse,
+      };
+      let url = `https://yesu.io/bible?lang=${op.lang}&doc=${op.doc}&start=${op.start}&end=${op.end}`;
+
+      console.log(op);
+      console.log(`https://yesu.io/bible?lang=${op.lang}&doc=${op.doc}&start=${op.start}&end=${op.end}`);
+
+      fetch(url)
+              .then((res) => res.json())
+              .then((res) => {
+                bibleResultJson.value = JSON.stringify(res);
+                bibleResultText.innerHTML = '<h3>텍스트 결과</h3>';
+                res.forEach((line) => {
+                  bibleResultText.innerHTML += `<p><strong>${line.chapter}:${line.verse}</strong> ${line.message}</p>`;
+                })
+              });
+    }
+
+    function updateURL() {
+      let op = {
+        lang: bibleLang.value,
+        doc: bibleDoc.value,
+        start: `${bibleStartChapter.value}:${bibleStartVerse.value}`,
+        end: `${bibleEndChapter.value}:${bibleEndVerse.value}`,
+      };
+      bibleURL.value = `https://yesu.io/bible?lang=${op.lang}&doc=${op.doc}&start=${op.start}&end=${op.end}`;
+    }
+  </script>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="./js/index.js"></script>
+</html>
