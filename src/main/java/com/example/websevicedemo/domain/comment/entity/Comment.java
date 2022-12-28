@@ -29,7 +29,7 @@ public class Comment extends BaseEntity {
     private ReplyUserInfo replyUserInfo;
 
     @OneToMany(mappedBy = "comment", orphanRemoval = true, cascade = {CascadeType.ALL})
-    private List<ReComment> reCommentList = new ArrayList<>();
+    private final List<ReComment> reCommentList = new ArrayList<>();
 
     @ManyToOne
     @JoinColumn(name = "board_id")

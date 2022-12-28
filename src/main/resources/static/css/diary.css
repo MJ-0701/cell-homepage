@@ -80,7 +80,8 @@
     border: none;
     border-radius: 7px;
     color: #fff;
-    /*display: block;*/
+
+    display: block;
     margin: 20px auto;
 }
 .diary-button:hover {
