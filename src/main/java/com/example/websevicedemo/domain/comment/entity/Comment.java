@@ -1,7 +1,7 @@
 package com.example.websevicedemo.domain.comment.entity;
 
 import com.example.websevicedemo.domain.board.entity.Board;
-import com.example.websevicedemo.global.entity.BaseEntity;
+import com.example.websevicedemo.global.entity.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -17,7 +17,7 @@ import java.util.List;
 @Getter
 @Table(name = "comment")
 @Builder
-public class Comment extends BaseEntity {
+public class Comment extends BaseTimeEntity {
 
     private String comment;
 

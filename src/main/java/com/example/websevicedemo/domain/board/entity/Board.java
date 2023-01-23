@@ -3,7 +3,7 @@ package com.example.websevicedemo.domain.board.entity;
 
 import com.example.websevicedemo.domain.comment.entity.Comment;
 import com.example.websevicedemo.domain.file.entity.Files;
-import com.example.websevicedemo.global.entity.BaseEntity;
+import com.example.websevicedemo.global.entity.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,7 +18,7 @@ import java.util.List;
 @Entity
 @Getter
 @NoArgsConstructor
-public class Board extends BaseEntity {
+public class Board extends BaseTimeEntity {
 
     private String title;
 

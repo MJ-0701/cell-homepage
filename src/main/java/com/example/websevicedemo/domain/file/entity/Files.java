@@ -1,7 +1,7 @@
 package com.example.websevicedemo.domain.file.entity;
 
 import com.example.websevicedemo.domain.board.entity.Board;
-import com.example.websevicedemo.global.entity.BaseEntity;
+import com.example.websevicedemo.global.entity.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -15,7 +15,7 @@ import javax.persistence.ManyToOne;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Files extends BaseEntity {
+public class Files extends BaseTimeEntity {
 
     private String originalFileName;
 
