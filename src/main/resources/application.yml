@@ -18,11 +18,11 @@ spring:
 #    database: mysql
 #
 #
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    username: jack
-#    password: jack
+  datasource:
+    url: jdbc:mysql://localhost:3306/cyworld?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: jack
+    password: jack
 
 
 
@@ -56,7 +56,5 @@ logging:
   level:
     org.hibernate.sql: debug
     org.hibernate.type: trace
-
-
 
 

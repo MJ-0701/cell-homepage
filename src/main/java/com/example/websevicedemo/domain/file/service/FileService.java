@@ -3,6 +3,7 @@ package com.example.websevicedemo.domain.file.service;
 
 import com.example.websevicedemo.domain.file.entity.Files;
 import com.example.websevicedemo.domain.file.web.dto.FilesDto;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
@@ -16,7 +17,11 @@ import java.util.List;
 import java.util.UUID;
 
 @Component
+@RequiredArgsConstructor
 public class FileService {
+
+    private final S3Uploader s3Uploader;
+
 
     public List<Files> fileInfo(
             List<MultipartFile> multipartFiles
@@ -78,7 +83,7 @@ public class FileService {
                 }
 
                 // 파일명 중복 피하고자 나노초까지 얻어와 지정
-                String new_file_name = System.nanoTime() + originalFileExtension;
+//                String new_file_name = System.nanoTime() + originalFileExtension;
                 UUID uuid = UUID.randomUUID();
                 String fileName = uuid + "_" + file_name;
 
@@ -99,14 +104,15 @@ public class FileService {
                 // 생성 후 리스트에 추가
                 fileList.add(files);
 
-                // 업로드 한 파일 데이터를 지정한 파일에 저장
-//                file = new File(absolutePath + path + File.separator + new_file_name);
-                file = new File(absolutePath + path + File.separator + fileName);
-                multipartFile.transferTo(file);
+//                // 업로드 한 파일 데이터를 지정한 파일에 저장
+//                file = new File(absolutePath + path + File.separator + fileName);
+//                multipartFile.transferTo(file);
 
-                // 파일 권한 설정(쓰기, 읽기)
-                file.setWritable(true);
-                file.setReadable(true);
+//                // 파일 권한 설정(쓰기, 읽기)
+//                file.setWritable(true);
+//                file.setReadable(true);
+
+                s3Uploader.upload(multipartFile, absolutePath);
             }
         }
 

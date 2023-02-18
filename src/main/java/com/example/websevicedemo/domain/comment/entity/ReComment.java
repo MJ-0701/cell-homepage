@@ -16,8 +16,12 @@ import javax.persistence.*;
 @Builder
 public class ReComment extends BaseTimeEntity {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String reComment;
 
+    @Embedded
     private ReplyUserInfo replyUserInfo;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -19,6 +19,9 @@ import java.util.List;
 @Builder
 public class Comment extends BaseTimeEntity {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String comment;
 
     @Embedded
