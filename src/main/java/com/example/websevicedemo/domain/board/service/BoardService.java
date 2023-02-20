@@ -68,5 +68,6 @@ public class BoardService {
                 .password(dto.getPassword())
                 .imageUrl(storedFileName)
                 .build();
+        boardRepository.save(board);
     }
 }

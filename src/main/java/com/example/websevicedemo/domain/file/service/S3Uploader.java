@@ -65,15 +65,22 @@ public class S3Uploader {
 
     private Optional<File> convert(MultipartFile file) throws  IOException {
         File convertFile = new File(Objects.requireNonNull(file.getOriginalFilename()));
-        if(!convertFile.createNewFile()) {
+        log.info("파일 존재 유무 : {}", convertFile.exists());
+        log.info("뉴 파일? : {}", convertFile.createNewFile());
 
-            try (FileOutputStream fos = new FileOutputStream(convertFile)) {
-                fos.write(file.getBytes());
-            }
-            return Optional.of(convertFile);
-        }else {
-            return Optional.empty();
+        try (FileOutputStream fos = new FileOutputStream(convertFile)) {
+            fos.write(file.getBytes());
         }
+        return Optional.of(convertFile);
+
+//        if(convertFile.exists()) {
+//            try (FileOutputStream fos = new FileOutputStream(convertFile)) {
+//                fos.write(file.getBytes());
+//            }
+//            return Optional.of(convertFile);
+//        }else {
+//            return Optional.empty();
+//        }
 
     }
 

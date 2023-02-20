@@ -36,10 +36,11 @@
                         </p>
                         <div class="profile-name">유진Cell</div>
                         <div class="dropdown">
-                            <select name="padotagi" class="padotagi">
+                            <select name="padotagi" class="padotagi" onchange="window.open(value,'_blank');">
                                 <option value="none" selected disabled hidden>파도타기</option>
-                                <option value="blog"><a href="#">블로그로 가기</a></option>
-                                <option value="github"><a href="#">GitHub으로 가기</a></option>
+                                <option value="https://tan-grip-0e6.notion.site/df14db4e1ef94f4c9f5de40fab986bf2">IntelliMJ 노션</option>
+                                <option value="https://github.com/MJ-0701">GitHub으로 가기</option>
+                                <option value="https://jack2718.tistory.com/">블로그로 이동</option>
                             </select>
                         </div>
                     </div>
@@ -97,15 +98,11 @@
         let random = bibleTitle[Math.floor(Math.random() * bibleTitle.length)] ;
 
         let korDoc = "";
-
-
+        let doc = random
 
         let chapterRand = Math.floor(Math.random() * 50) + 1 // 1 ~ 50
         let verseRand = Math.floor(Math.random() * 50) + 1 // 1 ~ 50
 
-        let doc = random
-        let start = chapterRand + ":" + verseRand
-        let end = chapterRand + ":" + verseRand
 
         const bibleDate = document.getElementById("bible-date");
         const bibleDoc = document.getElementById("bible-doc");
@@ -114,203 +111,303 @@
         switch (doc) {
             case 'ge' :
                 korDoc = "창세기"
+                chapterRand = Math.floor(Math.random() * 50) + 1 // 1 ~ 50
+
                 break;
             case 'exo':
                 korDoc = "출애굽기"
+                chapterRand = Math.floor(Math.random() * 40) + 1 // 1 ~ 40
+
                 break;
             case 'lev':
                 korDoc = "레위기"
+                chapterRand = Math.floor(Math.random() * 27) + 1 // 1 ~ 27
+
                 break;
             case 'num':
                 korDoc = "민수기"
+                chapterRand = Math.floor(Math.random() * 36) + 1 // 1 ~ 36
+
                 break;
             case 'deu':
                 korDoc = "신명기"
+                chapterRand = Math.floor(Math.random() * 34) + 1 // 1 ~ 34
+
                 break;
             case 'josh':
                 korDoc = "여호수와"
+                chapterRand = Math.floor(Math.random() * 24) + 1 // 1 ~ 24
+
                 break;
             case 'jdgs':
                 korDoc = "사사기"
+                chapterRand = Math.floor(Math.random() * 21) + 1 // 1 ~ 21
+
                 break;
             case 'ruth':
                 korDoc = "룻기"
+                chapterRand = Math.floor(Math.random() * 4) + 1 // 1 ~ 4
+
                 break;
             case '1sm':
                 korDoc = "사무엘상"
+                chapterRand = Math.floor(Math.random() * 31) + 1 // 1 ~ 31
+
                 break;
             case '2sm':
                 korDoc = "사무엘하"
+                chapterRand = Math.floor(Math.random() * 24) + 1 // 1 ~ 24
+
                 break;
             case '1ki':
                 korDoc = "열왕기상"
+                chapterRand = Math.floor(Math.random() * 22) + 1 // 1 ~ 22
+
                 break;
             case '2ki':
                 korDoc = "열왕기하"
+                chapterRand = Math.floor(Math.random() * 25) + 1 // 1 ~ 25
+
                 break;
             case '1chr':
                 korDoc = "역대상"
+                chapterRand = Math.floor(Math.random() * 29) + 1 // 1 ~ 29
+
                 break;
             case '2chr':
                 korDoc = "역대하"
+                chapterRand = Math.floor(Math.random() * 36) + 1 // 1 ~ 36
+
                 break;
             case 'ezra':
                 korDoc = "에스라"
+                chapterRand = Math.floor(Math.random() * 10) + 1 // 1 ~ 10
+
                 break;
             case 'neh':
                 korDoc = "느헤미야"
+                chapterRand = Math.floor(Math.random() * 13) + 1 // 1 ~ 13
+
                 break;
             case 'est':
                 korDoc = "에스더"
+                chapterRand = Math.floor(Math.random() * 10) + 1 // 1 ~ 10
+
                 break;
             case 'job':
                 korDoc = "욥기"
+                chapterRand = Math.floor(Math.random() * 42) + 1 // 1 ~ 42
+
                 break;
             case 'psa':
                 korDoc = "시편"
+                chapterRand = Math.floor(Math.random() * 150) + 1 // 1 ~ 150
+
                 break;
             case 'prv':
                 korDoc = "잠언"
+                chapterRand = Math.floor(Math.random() * 31) + 1 // 1 ~ 31
+
                 break;
             case 'eccl':
                 korDoc = "전도서"
+                chapterRand = Math.floor(Math.random() * 12) + 1 // 1 ~ 12
+
                 break;
             case 'ssol':
                 korDoc = "아가"
+                chapterRand = Math.floor(Math.random() * 8) + 1 // 1 ~ 8
+
                 break;
             case 'isa':
                 korDoc = "이사야"
+                chapterRand = Math.floor(Math.random() * 66) + 1 // 1 ~ 66
+
                 break;
             case 'jer':
                 korDoc = "예레미야"
+                chapterRand = Math.floor(Math.random() * 52) + 1 // 1 ~ 52
+
                 break;
             case 'lam':
                 korDoc = "에레미야애가"
+                chapterRand = Math.floor(Math.random() * 5) + 1 // 1 ~ 5
+
                 break;
             case 'eze':
                 korDoc = "에스겔"
+                chapterRand = Math.floor(Math.random() * 48) + 1 // 1 ~ 48
+
                 break;
             case 'dan':
                 korDoc = "다니엘"
+                chapterRand = Math.floor(Math.random() * 12) + 1 // 1 ~ 12
+
                 break;
             case 'hos':
                 korDoc = "호세아"
+                chapterRand = Math.floor(Math.random() * 14) + 1 // 1 ~ 14
+
                 break;
             case 'joel':
                 korDoc = "요엘"
+                chapterRand = Math.floor(Math.random() * 3) + 1 // 1 ~ 3
+
                 break;
             case 'amos':
                 korDoc = "아모스"
+                chapterRand = Math.floor(Math.random() * 9) + 1 // 1 ~ 9
+
                 break;
             case 'obad':
                 korDoc = "오바댜"
+                chapterRand = Math.floor(Math.random()) + 1 // 1 ~ 1
                 break;
             case 'jonah':
                 korDoc = "요나"
+                chapterRand = Math.floor(Math.random() * 4) + 1 // 1 ~ 4
                 break;
             case 'mic':
                 korDoc = "미가"
+                chapterRand = Math.floor(Math.random() * 7) + 1 // 1 ~ 7
                 break;
             case 'nahum':
                 korDoc = "나훔"
+                chapterRand = Math.floor(Math.random() * 3) + 1 // 1 ~ 3
                 break;
             case 'hab':
                 korDoc = "하박국"
+                chapterRand = Math.floor(Math.random() * 3) + 1 // 1 ~ 3
                 break;
             case 'zep':
                 korDoc = "스바냐"
+                chapterRand = Math.floor(Math.random() * 3) + 1 // 1 ~ 3
                 break;
             case 'hag':
                 korDoc = "학개"
+                chapterRand = Math.floor(Math.random() * 2) + 1 // 1 ~ 3
                 break;
             case 'zec':
                 korDoc = "스가랴"
+                chapterRand = Math.floor(Math.random() * 14) + 1 // 1 ~ 14
                 break;
             case 'mal':
                 korDoc = "말라기"
+                chapterRand = Math.floor(Math.random() * 4) + 1 // 1 ~ 4
                 break;
             case 'mat':
                 korDoc = "마태복음"
+                chapterRand = Math.floor(Math.random() * 28) + 1 // 1 ~ 28
                 break;
             case 'mark':
                 korDoc = "마가복음"
+                chapterRand = Math.floor(Math.random() * 16) + 1 // 1 ~ 16
                 break;
             case 'luke':
                 korDoc = "누가복음"
+                chapterRand = Math.floor(Math.random() * 24) + 1 // 1 ~ 24
                 break;
             case 'john':
                 korDoc = "요한복음"
+                chapterRand = Math.floor(Math.random() * 21) + 1 // 1 ~ 21
                 break;
             case 'acts':
                 korDoc = "사도행전"
+                chapterRand = Math.floor(Math.random() * 28) + 1 // 1 ~ 28
                 break;
             case 'rom':
                 korDoc = "로마서"
+                chapterRand = Math.floor(Math.random() * 16) + 1 // 1 ~ 16
                 break;
             case '1cor':
                 korDoc = "고린도전서"
+                chapterRand = Math.floor(Math.random() * 16) + 1 // 1 ~ 16
                 break;
             case '2cor':
                 korDoc = "고린도후서"
+                chapterRand = Math.floor(Math.random() * 13) + 1 // 1 ~ 13
                 break;
             case 'gal':
                 korDoc = "갈라디아서"
+                chapterRand = Math.floor(Math.random() * 6) + 1 // 1 ~ 6
                 break;
             case 'eph':
                 korDoc = "에베소서"
+                chapterRand = Math.floor(Math.random() * 6) + 1 // 1 ~ 6
                 break;
             case 'phi':
                 korDoc = "빌립보서"
+                chapterRand = Math.floor(Math.random() * 4) + 1 // 1 ~ 4
                 break;
             case 'col':
                 korDoc = "골로새서"
+                chapterRand = Math.floor(Math.random() * 4) + 1 // 1 ~ 4
                 break;
             case '1th':
                 korDoc = "데살로니가전서"
+                chapterRand = Math.floor(Math.random() * 5) + 1 // 1 ~ 5
                 break;
             case '2th':
                 korDoc = "데살로니가후서"
+                chapterRand = Math.floor(Math.random() * 3) + 1 // 1 ~ 3
                 break;
             case '1tim':
                 korDoc = "디모데전서"
+                chapterRand = Math.floor(Math.random() * 6) + 1 // 1 ~ 6
                 break;
             case '2tim':
                 korDoc = "디모데후서"
+                chapterRand = Math.floor(Math.random() * 4) + 1 // 1 ~ 4
                 break;
             case 'titus':
                 korDoc = "디도서"
+                chapterRand = Math.floor(Math.random() * 3) + 1 // 1 ~ 3
                 break;
             case 'phmn':
                 korDoc = "빌레몬서"
+                chapterRand = Math.floor(Math.random()) + 1 // 1
                 break;
             case 'heb':
                 korDoc = "히브리서"
+                chapterRand = Math.floor(Math.random() * 13) + 1 // 1 ~ 13
                 break;
             case 'jas':
                 korDoc = "야고보서"
+                chapterRand = Math.floor(Math.random() * 5) + 1 // 1 ~ 5
                 break;
             case '1pet':
                 korDoc = "베드로전서"
+                chapterRand = Math.floor(Math.random() * 5) + 1 // 1 ~ 5
                 break;
             case '2pet':
                 korDoc = "베드로후서"
+                chapterRand = Math.floor(Math.random() * 3) + 1 // 1 ~ 3
                 break;
             case '1jin':
                 korDoc = "요한1서"
+                chapterRand = Math.floor(Math.random() * 5) + 1 // 1 ~ 5
                 break;
             case '2jin':
                 korDoc = "요한2서"
+                chapterRand = Math.floor(Math.random()) + 1 // 1
                 break;
             case '3jin':
                 korDoc = "요한3서"
+                chapterRand = Math.floor(Math.random()) + 1 // 1
                 break;
             case 'jude':
                 korDoc = "유다서"
+                chapterRand = Math.floor(Math.random()) + 1 // 1
                 break;
             case 'rev':
                 korDoc = "요한계시록"
+                chapterRand = Math.floor(Math.random() * 22) + 1 // 1 ~ 22
                 break;
         }
+
+
+        let start = chapterRand + ":" + verseRand
+        let end = chapterRand + ":" + verseRand
 
         let url = 'https://yesu.io/bible?lang=kor&doc='+doc+'&start='+start+'&end='+end
 
@@ -323,19 +420,20 @@
             console.log(doc);
             console.log(korDoc);
             $.each(data, function (index, item) {
-                // $("#bible-date").append(dateFormat1, "");
                 bibleDate.innerHTML = dateFormat1
                 bibleDoc.innerHTML = korDoc
-                // $("#bible-contents").append(item.chapter, "");
-                // $("#bible-contents").append(item.verse, "");
-                // $("#bible-contents").append(item.message, + "<br>");
                 bibleContents.innerHTML = `<p><strong>${item.chapter}:${item.verse}</strong> ${item.message}</p>`
             });
         }).fail(function (error) {
             // alert(url);
             // alert("에러");
             // alert(JSON.stringify(error));
-            getMinuteBible()
+            if(error.responseText === "") {
+                getMinuteBible()
+            }else {
+                alert(JSON.stringify(error));
+            }
+
         });
 
     }
