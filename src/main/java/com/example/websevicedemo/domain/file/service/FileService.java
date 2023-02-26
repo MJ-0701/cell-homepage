@@ -46,14 +46,13 @@ public class FileService {
             File file = new File(path);
 
             // 디렉터리가 존재하지 않을 경우
-            if(!file.exists()) {
-                boolean wasSuccessful = file.mkdirs();
-
-                // 디렉터리 생성에 실패했을 경우
-                if(!wasSuccessful)
-                    System.out.println("file: was not successful");
-            }
-
+//            if(!file.exists()) {
+//                boolean wasSuccessful = file.mkdirs();
+//
+//                // 디렉터리 생성에 실패했을 경우
+//                if(!wasSuccessful)
+//                    System.out.println("file: was not successful");
+//            }
             // 다중 파일 처리
             for(MultipartFile multipartFile : multipartFiles) {
 
@@ -87,10 +86,14 @@ public class FileService {
                 UUID uuid = UUID.randomUUID();
                 String fileName = uuid + "_" + file_name;
 
+                String storedPath = s3Uploader.upload(multipartFile, absolutePath);
+
+
                 // 파일 DTO 생성
                 FilesDto filesDto = FilesDto.builder()
                         .originFileName(multipartFile.getOriginalFilename())
-                        .filePath(path + File.separator + fileName)
+//                        .filePath(path + File.separator + fileName)
+                        .filePath(storedPath)
                         .fileSize(multipartFile.getSize())
                         .build();
 
@@ -112,7 +115,7 @@ public class FileService {
 //                file.setWritable(true);
 //                file.setReadable(true);
 
-                s3Uploader.upload(multipartFile, absolutePath);
+
             }
         }
 

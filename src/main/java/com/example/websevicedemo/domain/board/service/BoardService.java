@@ -31,7 +31,6 @@ public class BoardService {
     @Transactional
     public Long create(BoardDto dto) throws Exception {
 
-        System.out.println("타이틀 : " + dto.getTitle());
         Board board = Board
                 .builder()
                 .contents(dto.getContents())
