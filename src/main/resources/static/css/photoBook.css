@@ -67,24 +67,27 @@
     font-size: 15px;
 }
 .middle-box .fa-lock {
-    margin-right: 10px;
+    /*margin-right: 10px;*/
 }
 .diary-button {
     font-family: 'NeoDunggeunmo';
-    background-color: #fff;
+    background-color: rgb(3,171,138);
     padding: 15px;
     border: none;
     border-radius: 7px;
     color: #fff;
+
     display: block;
     margin: 20px auto;
 }
 .diary-button:hover {
-    background-color: rgb(3,171,138);
+    /*background-color: rgb(3,171,138);*/
     transition: 1500ms;
     cursor: pointer;
 }
-#secret-box {
-    margin-top: 30px;
-    display: none;
-}
+
+
+/*#secret-box {*/
+/*    margin-top: 30px;*/
+/*    display: none;*/
+/*}*/

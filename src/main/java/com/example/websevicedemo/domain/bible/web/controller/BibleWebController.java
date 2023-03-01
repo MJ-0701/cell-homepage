@@ -8,7 +8,7 @@ public class BibleWebController {
 
     @GetMapping("/today-bible")
     public String bibleWeb() {
-        return "bible";
+        return "bible/bible";
     }
 
     @GetMapping("/bible-test")

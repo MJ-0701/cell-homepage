@@ -10,6 +10,6 @@ public class DiaryWebController {
     @GetMapping("/diary")
     public String diaryView() {
 
-        return "diary";
+        return "diary/diary";
     }
 }

@@ -8,6 +8,6 @@ public class GuestBookWebController {
 
     @GetMapping("/guest-book")
     public String guestBookView() {
-        return "guestbook";
+        return "guest-book/guestbook";
     }
 }

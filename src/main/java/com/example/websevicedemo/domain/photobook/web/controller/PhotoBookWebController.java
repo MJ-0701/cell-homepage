@@ -15,7 +15,13 @@ public class PhotoBookWebController {
     @GetMapping("/photo-book")
     public String photoBookView() {
 
-        return "photobook";
+        return "photo-book/photo-book";
+    }
+
+    @GetMapping("/photo-book/write")
+    public String photoBookWrite() {
+
+        return "photo-book/photo-book-write";
     }
 
 
