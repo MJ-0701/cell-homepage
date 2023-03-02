@@ -5,6 +5,8 @@ import com.example.websevicedemo.domain.file.entity.Files;
 import com.example.websevicedemo.domain.file.entity.PhotoBookFiles;
 import com.example.websevicedemo.domain.file.web.dto.FilesDto;
 import com.example.websevicedemo.domain.file.web.dto.PhotoBookFilesDto;
+import com.example.websevicedemo.global.utils.FileFolder;
+import com.example.websevicedemo.global.utils.S3FileProcessService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
@@ -23,6 +25,7 @@ import java.util.UUID;
 public class PhotoBookFileService {
 
     private final S3Uploader s3Uploader;
+    private final S3FileProcessService s3FileProcessService;
 
 
     public List<PhotoBookFiles> fileInfo(
@@ -88,7 +91,9 @@ public class PhotoBookFileService {
                 UUID uuid = UUID.randomUUID();
                 String fileName = uuid + "_" + file_name;
 
-                String storedPath = s3Uploader.upload(multipartFile, absolutePath);
+//                String storedPath = s3Uploader.upload(multipartFile, absolutePath);
+                String storedPath = s3FileProcessService.uploadImage(multipartFile, FileFolder.YOOJINCELL_IMAGES);
+
 
 
                 // 파일 DTO 생성

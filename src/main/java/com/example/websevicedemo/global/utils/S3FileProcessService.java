@@ -17,7 +17,7 @@ public class S3FileProcessService {
     private final AmazonS3Service amazonS3Service;
 
     public String uploadImage(MultipartFile file, FileFolder fileFolder) {
-        String fileName = amazonS3Service.getFileFolder(fileFolder) + createFileName(file.getOriginalFilename());
+        String fileName = amazonS3Service.getFileFolder(fileFolder) + "/" +  createFileName(file.getOriginalFilename());
 
         ObjectMetadata objectMetadata = new ObjectMetadata();
         objectMetadata.setContentLength(file.getSize());

@@ -25,7 +25,7 @@
             </div>
             <div class="form-group">
                 <label for="files">사진</label>
-                <input type="file" class="form-control" id="files" name="files" placeholder="사진을 입력해 주세요.">
+                <input type="file" class="form-control" id="files" name="files" placeholder="사진을 입력해 주세요." required>
             </div>
             <div class="form-group">
                 <label for="contents">내용</label>
@@ -58,7 +58,7 @@
             processData : false
         }).done(function (data) {
             alert('글이 등록되었습니다.');
-            alert(JSON.stringify(data));
+            // alert(JSON.stringify(data));
             window.location.href = '/';
         }).fail(function (error) {
             alert(JSON.stringify(error));

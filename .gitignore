@@ -39,3 +39,6 @@ out/
 # 운영설정
 real-application.yml
 application-aws.yml
+
+# 쿼리 dsl 자동생성 파일
+generated

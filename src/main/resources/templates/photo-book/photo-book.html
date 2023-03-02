@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/photoBook.css">
+    <link rel="stylesheet" href="./css/pagination.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
 
 
 </head>
@@ -54,116 +59,101 @@
                 <div class="middle-box">
                     <div class="photo-wrap">
                         <div class="diary-container">
-                            <div class="diary-box">
-                                <div class="diary-date">2022.02.21 월 02:46</div>
-                                <div class="diary-txt">
-                                    <div class="photo-container">
-                                        <div class="photo-title">
-                                            <span>Test 사진 1</span>
-                                        </div>
-                                        <div style="width: auto">
-                                            <img style="width: 100%" class="photo" src="https://yoojin-cell-bucket-2023.s3.ap-northeast-2.amazonaws.com//Users/chaemyeongjeong/IdeaProjects/web-service-demo///KakaoTalk_Photo_2023-02-26-21-04-43+003.jpeg" alt="photo1">
-                                        </div>
 
-                                        <div class="photo-desc">
-                                            Test 사진 1 Description
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<!--                            <div class="diary-box">-->
+<!--                                <div class="diary-date">2022.02.21 월 02:46</div>-->
+<!--                                <div class="diary-txt">-->
+<!--                                    <div class="photo-container">-->
+<!--                                        <div class="photo-title">-->
+<!--                                            <span id="photoTitle">Test 사진 1</span>-->
+<!--                                        </div>-->
+<!--                                        <div style="width: auto">-->
+<!--                                            <img style="width: 100%" class="photo" src="https://yoojin-cell-bucket-2023.s3.ap-northeast-2.amazonaws.com//Users/chaemyeongjeong/IdeaProjects/web-service-demo///KakaoTalk_Photo_2023-02-26-21-04-43+003.jpeg" alt="photo1">-->
+<!--                                        </div>-->
+<!--                                        <div class="photo-desc">-->
+<!--                                            Test 사진 1 Description-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
 
-                            <div class="diary-box">
-                                <div class="diary-date">2023.02.26 일 21:13</div>
-                                <div class="diary-txt">
-                                    <div class="photo-container">
-                                        <div class="photo-title">
-                                            <span>Test 사진 1</span>
-                                        </div>
-                                        <div style="width: auto">
-                                            <img style="width: 100%" class="photo" src="https://yoojin-cell-bucket-2023.s3.ap-northeast-2.amazonaws.com//Users/chaemyeongjeong/IdeaProjects/web-service-demo///2023-02-26+%E1%84%8B%E1%85%B2%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A6%E1%86%AF+%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A2%E1%86%BC%E1%84%82%E1%85%A6%E1%84%8F%E1%85%A5%E1%86%BA.png" alt="photo1">
-                                        </div>
+<!--                            <div class="diary-box">-->
+<!--                                <div class="diary-date">2023.02.26 일 21:13</div>-->
+<!--                                <div class="diary-txt">-->
+<!--                                    <div class="photo-container">-->
+<!--                                        <div class="photo-title">-->
+<!--                                            <span>Test 사진 1</span>-->
+<!--                                        </div>-->
+<!--                                        <div style="width: auto">-->
+<!--                                            <img style="width: 100%" class="photo" src="https://yoojin-cell-bucket-2023.s3.ap-northeast-2.amazonaws.com//Users/chaemyeongjeong/IdeaProjects/web-service-demo///2023-02-26+%E1%84%8B%E1%85%B2%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A6%E1%86%AF+%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A2%E1%86%BC%E1%84%82%E1%85%A6%E1%84%8F%E1%85%A5%E1%86%BA.png" alt="photo1">-->
+<!--                                        </div>-->
 
-                                        <div class="photo-desc">
-                                            Test 사진 1 Description
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<!--                                        <div class="photo-desc">-->
+<!--                                            Test 사진 1 Description-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
 
-                            <div class="diary-box">
-                                <div class="diary-date">2023.02.26 일 21:13</div>
-                                <div class="diary-txt">
-                                    <div class="photo-container">
-                                        <div class="photo-title">
-                                            <span>Test 사진 2</span>
-                                        </div>
-                                        <div style="width: auto">
-                                            <img style="width: 100%" class="photo" src="https://yoojin-cell-bucket-2023.s3.ap-northeast-2.amazonaws.com//Users/chaemyeongjeong/IdeaProjects/web-service-demo///KakaoTalk_Photo_2023-02-26-21-04-45+015.jpeg" alt="photo1">
-                                        </div>
+<!--                            <div class="diary-box">-->
+<!--                                <div class="diary-date">2023.02.26 일 21:13</div>-->
+<!--                                <div class="diary-txt">-->
+<!--                                    <div class="photo-container">-->
+<!--                                        <div class="photo-title">-->
+<!--                                            <span>Test 사진 2</span>-->
+<!--                                        </div>-->
+<!--                                        <div style="width: auto">-->
+<!--                                            <img style="width: 100%" class="photo" src="https://yoojin-cell-bucket-2023.s3.ap-northeast-2.amazonaws.com//Users/chaemyeongjeong/IdeaProjects/web-service-demo///KakaoTalk_Photo_2023-02-26-21-04-45+015.jpeg" alt="photo1">-->
+<!--                                        </div>-->
 
-                                        <div class="photo-desc">
-                                            Test 사진 1 Description
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<!--                                        <div class="photo-desc">-->
+<!--                                            Test 사진 1 Description-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
 
-                            <div class="diary-box">
-                                <div class="diary-date">2023.02.26 일 21:13</div>
-                                <div class="diary-txt">
-                                    <div class="photo-container">
-                                        <div class="photo-title">
-                                            <span>Test 사진 3</span>
-                                        </div>
-                                        <div style="width: auto">
-                                            <img style="width: 100%" class="photo" src="https://yoojin-cell-bucket-2023.s3.ap-northeast-2.amazonaws.com//Users/chaemyeongjeong/IdeaProjects/web-service-demo///KakaoTalk_Photo_2023-02-26-21-04-45+017.jpeg" alt="photo1">
-                                        </div>
+<!--                            <div class="diary-box">-->
+<!--                                <div class="diary-date">2023.02.26 일 21:13</div>-->
+<!--                                <div class="diary-txt">-->
+<!--                                    <div class="photo-container">-->
+<!--                                        <div class="photo-title">-->
+<!--                                            <span>Test 사진 3</span>-->
+<!--                                        </div>-->
+<!--                                        <div style="width: auto">-->
+<!--                                            <img style="width: 100%" class="photo" src="https://yoojin-cell-bucket-2023.s3.ap-northeast-2.amazonaws.com//Users/chaemyeongjeong/IdeaProjects/web-service-demo///KakaoTalk_Photo_2023-02-26-21-04-45+017.jpeg" alt="photo1">-->
+<!--                                        </div>-->
 
-                                        <div class="photo-desc">
-                                            Test 사진 1 Description
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<!--                                        <div class="photo-desc">-->
+<!--                                            Test 사진 1 Description-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
 
-                            <div class="diary-box">
-                                <div class="diary-date">2023.02.26 일 21:13</div>
-                                <div class="diary-txt">
-                                    <div class="photo-container">
-                                        <div class="photo-title">
-                                            <span>Test 사진 4</span>
-                                        </div>
-                                        <div style="width: auto">
-                                            <img style="width: 100%" class="photo" src="https://yoojin-cell-bucket-2023.s3.ap-northeast-2.amazonaws.com//Users/chaemyeongjeong/IdeaProjects/web-service-demo///KakaoTalk_Photo_2023-02-26-21-04-45+018.jpeg" alt="photo1">
-                                        </div>
+<!--                            <div class="diary-box">-->
+<!--                                <div class="diary-date">2023.02.26 일 21:13</div>-->
+<!--                                <div class="diary-txt">-->
+<!--                                    <div class="photo-container">-->
+<!--                                        <div class="photo-title">-->
+<!--                                            <span>Test 사진 4</span>-->
+<!--                                        </div>-->
+<!--                                        <div style="width: auto">-->
+<!--                                            <img style="width: 100%" class="photo" src="https://yoojin-cell-bucket-2023.s3.ap-northeast-2.amazonaws.com//Users/chaemyeongjeong/IdeaProjects/web-service-demo///KakaoTalk_Photo_2023-02-26-21-04-45+018.jpeg" alt="photo1">-->
+<!--                                        </div>-->
 
-                                        <div class="photo-desc">
-                                            Test 사진 1 Description
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<!--                                        <div class="photo-desc">-->
+<!--                                            Test 사진 1 Description-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
 
+                            <ul id="pagingul">
 
-                            <div class="diary-box">
-                                <div class="diary-date">2023.02.26 일 21:13</div>
-                                <div class="diary-txt">
-                                    <div class="photo-container">
-                                        <div class="photo-title">
-                                            <span>Test 사진 5</span>
-                                        </div>
-                                        <div style="width: auto">
-                                            <img style="width: 100%" class="photo" src="https://yoojin-cell-bucket-2023.s3.ap-northeast-2.amazonaws.com/images/%E1%84%8C%E1%85%A2%E1%84%89%E1%85%A1%E1%86%BC%E1%84%8B%E1%85%B5%E1%84%91%E1%85%B3%E1%84%89%E1%85%A1%20%E1%84%87%E1%85%A9%E1%86%A8%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB.jpg" alt="photo1">
-                                        </div>
+                            </ul>
 
-                                        <div class="photo-desc">
-                                            Test 사진 1 Description
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button class="diary-button" onclick="location.href='/photo-book/write'"><i class="fa-solid fa-lock"></i>추억 기록하기</button>
+<!--                            <button class="diary-button" onclick="location.href='/photo-book/write'"><i class="fa-solid fa-lock"></i>추억 기록하기</button>-->
 <!--                            <div class="diary-box" id="secret-box">-->
 <!--                                <div class="diary-date">비밀 일기</div>-->
 <!--                                <div class="diary-txt" id="secret-txt"></div>-->
@@ -171,7 +161,15 @@
                         </div>
                     </div>
                 </div>
+
+<!--                <span id="displayCount"></span>-->
+<!--                <table id="dataTableBody">-->
+<!--                </table>-->
+
+
             </div>
+
+
             <div class="right-container">
                 <div class="menu-wrap">
                     <div onclick="location.href='/'" class="menu">홈</div>
@@ -189,9 +187,65 @@
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="./js/index.js"></script>
+<script>
+
+    let appendHtml = "";
+
+    $(document).ready(function () {
+        //dataPerPage 선택값 가져오기
+        $.ajax({
+            type: 'GET',
+            url: '/api/v1/photo-book/pagination',
+            dataType: "json"
+        }).done(function (data) {
+
+            $.each(data.content, function (index, item) {
+                appendHtml += '<div class="diary-box">';
+                appendHtml += '<div class="diary-date">"' + item.created_at.split(" ")[0] + ' '+ getDayOfWeek(item.created_at)  +'요일 '+ item.created_at.split(" ")[1] +'"</div>';
+                appendHtml += '<div class="diary-txt">';
+                appendHtml += '<div class="photo-container">';
+                appendHtml += '<div class="photo-title">';
+                appendHtml += '<span id="photoTitle">"' + item.title +'"</span>';
+                appendHtml += '</div>';
+                appendHtml += '<div style="width: auto">';
+                appendHtml += '<img style="width: 100%" className="photo"';
+                appendHtml += 'src="' + item.file_path + '"';
+                appendHtml +=' alt="photo1">'
+                appendHtml += '</div>'
+
+                appendHtml +='<div class="photo-desc">';
+                appendHtml += '"' + item.contents + '"';
+                appendHtml += '</div>';
+                appendHtml += '</div>';
+                appendHtml += '</div>';
+                appendHtml += '</div>';
+
+            })
+            appendHtml += '<button class="diary-button" onclick="location.href=\'/photo-book/write\'"><i class="fa-solid fa-lock"></i>추억 기록하기</button>';
+
+            $(".diary-container").html(appendHtml);
+
+        }).fail(function (error) {
+            alert(JSON.stringify(error));
+        });
+
+    });
+
+
+    function getDayOfWeek(dateTime){
+
+        const week = ['일', '월', '화', '수', '목', '금', '토'];
+
+        const dayOfWeek = week[new Date(dateTime).getDay()];
+
+        return dayOfWeek;
+
+    }
+
+
+
+
+</script>
 </body>
 </html>
 

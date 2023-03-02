@@ -11,7 +11,12 @@ import com.example.websevicedemo.domain.file.service.PhotoBookFileService;
 import com.example.websevicedemo.domain.photobook.entity.PhotoBook;
 import com.example.websevicedemo.domain.photobook.entity.repository.PhotoBookRepository;
 import com.example.websevicedemo.domain.photobook.web.dto.PhotoBookDto;
+import com.example.websevicedemo.domain.photobook.web.dto.PhotoBookFileDto;
+import com.example.websevicedemo.domain.photobook.web.dto.PhotoBookSearchCondition;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -46,5 +51,11 @@ public class PhotoBookService {
         }
 
         return photoBookRepository.save(photoBook).getId();
+    }
+
+    @Transactional(readOnly = true)
+    public Page<PhotoBookFileDto> pagination(PhotoBookSearchCondition condition, Pageable pageable) {
+
+        return photoBookRepository.searchPageComplex(condition, pageable);
     }
 }
