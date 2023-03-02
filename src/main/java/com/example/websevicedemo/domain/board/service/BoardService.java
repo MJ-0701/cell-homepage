@@ -7,6 +7,8 @@ import com.example.websevicedemo.domain.file.entity.Files;
 import com.example.websevicedemo.domain.file.entity.repository.FilesRepository;
 import com.example.websevicedemo.domain.file.service.FileService;
 import com.example.websevicedemo.domain.file.service.S3Uploader;
+import com.example.websevicedemo.global.utils.FileFolder;
+import com.example.websevicedemo.global.utils.S3FileProcessService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -25,6 +27,7 @@ public class BoardService {
     private final FilesRepository filesRepository;
     private final FileService fileService;
     private final S3Uploader s3Uploader;
+    private final S3FileProcessService s3FileProcessService;
 
 
 
@@ -57,6 +60,26 @@ public class BoardService {
         if(!image.isEmpty()) {
             System.out.println("진입 확인 : " + image.getOriginalFilename());
             storedFileName = s3Uploader.upload(image,"images");
+        }
+
+        Board board = Board
+                .builder()
+                .contents(dto.getContents())
+                .title(dto.getTitle())
+                .nickName(dto.getNickName())
+                .password(dto.getPassword())
+                .imageUrl(storedFileName)
+                .build();
+        boardRepository.save(board);
+    }
+
+    @Transactional
+    public void s3Upload2(MultipartFile image, BoardDto dto) throws IOException {
+        String storedFileName = "";
+
+        if(!image.isEmpty()) {
+            System.out.println("진입 확인 : " + image.getOriginalFilename());
+            storedFileName = s3FileProcessService.uploadImage(image, FileFolder.YOOJINCELL_IMAGES);
         }
 
         Board board = Board

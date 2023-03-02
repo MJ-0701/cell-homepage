@@ -69,14 +69,27 @@ public class BoardApiController {
 
     @PostMapping("/s3-upload")
     public void s3FileUpload(
-            @RequestParam(value = "image")MultipartFile image,
+            @RequestParam(value = "files")MultipartFile files,
             BoardDto dto
             ) throws IOException {
 
-        System.out.println("이미지 파일" + image);
+        System.out.println("이미지 파일" + files);
         System.out.println("dto : " + dto);
 
-        boardService.s3Upload(image, dto);
+        boardService.s3Upload(files, dto);
+
+    }
+
+    @PostMapping("/s3-upload2")
+    public void s3FileUpload2(
+            @RequestParam(value = "files")MultipartFile files,
+            BoardDto dto
+    ) throws IOException {
+
+        System.out.println("이미지 파일" + files);
+        System.out.println("dto : " + dto);
+
+        boardService.s3Upload2(files, dto);
 
     }
 

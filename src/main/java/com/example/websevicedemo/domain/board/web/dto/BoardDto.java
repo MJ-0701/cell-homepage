@@ -23,6 +23,7 @@ public class BoardDto {
 
     private String password;
 
+    @JsonProperty("files")
     private List<MultipartFile> files = new ArrayList<>();
 
     private String imageUrl;

@@ -1,6 +1,7 @@
 package com.example.websevicedemo.domain.photobook.entity;
 
 import com.example.websevicedemo.domain.file.entity.Files;
+import com.example.websevicedemo.domain.file.entity.PhotoBookFiles;
 import com.example.websevicedemo.global.entity.BaseTimeEntity;
 import lombok.*;
 
@@ -20,7 +21,7 @@ public class PhotoBook extends BaseTimeEntity {
     private String title;
 
     @OneToMany(mappedBy = "photoBook", cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
-    private List<Files> files = new ArrayList<>();
+    private List<PhotoBookFiles> files = new ArrayList<>();
 
     private String contents;
 
@@ -32,7 +33,7 @@ public class PhotoBook extends BaseTimeEntity {
 
 
     // PhotoBook에서 파일 처리 위함.
-    public void addFiles(Files files){
+    public void addFiles(PhotoBookFiles files){
         this.files.add(files);
 
         // 게시글에 파일이 저장되어있지 않은 경우

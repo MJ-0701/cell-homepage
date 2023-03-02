@@ -3,8 +3,11 @@ package com.example.websevicedemo.domain.photobook.service;
 import com.example.websevicedemo.domain.board.entity.Board;
 import com.example.websevicedemo.domain.board.web.dto.BoardDto;
 import com.example.websevicedemo.domain.file.entity.Files;
+import com.example.websevicedemo.domain.file.entity.PhotoBookFiles;
 import com.example.websevicedemo.domain.file.entity.repository.FilesRepository;
+import com.example.websevicedemo.domain.file.entity.repository.PhotoBookFilesRepository;
 import com.example.websevicedemo.domain.file.service.FileService;
+import com.example.websevicedemo.domain.file.service.PhotoBookFileService;
 import com.example.websevicedemo.domain.photobook.entity.PhotoBook;
 import com.example.websevicedemo.domain.photobook.entity.repository.PhotoBookRepository;
 import com.example.websevicedemo.domain.photobook.web.dto.PhotoBookDto;
@@ -19,8 +22,8 @@ import java.util.List;
 public class PhotoBookService {
 
     private final PhotoBookRepository photoBookRepository;
-    private final FilesRepository filesRepository;
-    private final FileService fileService;
+    private final PhotoBookFilesRepository photoBookFilesRepository;
+    private final PhotoBookFileService fileService;
 
     @Transactional
     public Long create(PhotoBookDto dto) throws Exception {
@@ -33,12 +36,12 @@ public class PhotoBookService {
                 .title(dto.getTitle())
                 .build();
 
-        List<Files> filesList = fileService.fileInfo(dto.getFiles());
+        List<PhotoBookFiles> filesList = fileService.fileInfo(dto.getFiles());
         // 파일이 존재할 때에만 처리
         if(!filesList.isEmpty()) {
-            for(Files file : filesList) {
+            for(PhotoBookFiles file : filesList) {
                 // 파일을 DB에 저장
-                photoBook.addFiles(filesRepository.save(file));
+                photoBook.addFiles(photoBookFilesRepository.save(file));
             }
         }
 

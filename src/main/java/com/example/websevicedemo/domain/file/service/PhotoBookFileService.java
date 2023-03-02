@@ -2,9 +2,9 @@ package com.example.websevicedemo.domain.file.service;
 
 
 import com.example.websevicedemo.domain.file.entity.Files;
+import com.example.websevicedemo.domain.file.entity.PhotoBookFiles;
 import com.example.websevicedemo.domain.file.web.dto.FilesDto;
-import com.example.websevicedemo.global.utils.FileFolder;
-import com.example.websevicedemo.global.utils.S3FileProcessService;
+import com.example.websevicedemo.domain.file.web.dto.PhotoBookFilesDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
@@ -20,17 +20,16 @@ import java.util.UUID;
 
 @Component
 @RequiredArgsConstructor
-public class FileService {
+public class PhotoBookFileService {
 
     private final S3Uploader s3Uploader;
-    private final S3FileProcessService s3FileProcessService;
 
 
-    public List<Files> fileInfo(
+    public List<PhotoBookFiles> fileInfo(
             List<MultipartFile> multipartFiles
     )throws Exception {
         // 반환할 파일 리스트
-        List<Files> fileList = new ArrayList<>();
+        List<PhotoBookFiles> fileList = new ArrayList<>();
 
         // 전달되어 온 파일이 존재할 경우
         if(!CollectionUtils.isEmpty(multipartFiles)) {
@@ -89,12 +88,11 @@ public class FileService {
                 UUID uuid = UUID.randomUUID();
                 String fileName = uuid + "_" + file_name;
 
-//                String storedPath = s3Uploader.upload(multipartFile, absolutePath);
-                String storedPath = s3FileProcessService.uploadImage(multipartFile, FileFolder.YOOJINCELL_IMAGES);
+                String storedPath = s3Uploader.upload(multipartFile, absolutePath);
 
 
                 // 파일 DTO 생성
-                FilesDto filesDto = FilesDto.builder()
+                PhotoBookFilesDto filesDto = PhotoBookFilesDto.builder()
                         .originFileName(multipartFile.getOriginalFilename())
 //                        .filePath(path + File.separator + fileName)
                         .filePath(storedPath)
@@ -102,7 +100,7 @@ public class FileService {
                         .build();
 
                 // 파일 DTO 이용하여 Photo 엔티티 생성
-                Files files = new Files(
+                PhotoBookFiles files = new PhotoBookFiles(
                         filesDto.getOriginFileName(),
                         filesDto.getFilePath(),
                         filesDto.getFileSize()
