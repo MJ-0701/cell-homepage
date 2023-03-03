@@ -1,8 +1,8 @@
 package com.example.websevicedemo.domain.file.service;
 
 
-import com.example.websevicedemo.domain.file.entity.Files;
-import com.example.websevicedemo.domain.file.web.dto.FilesDto;
+import com.example.websevicedemo.domain.file.entity.BoardFiles;
+import com.example.websevicedemo.domain.file.web.dto.BoardFilesDto;
 import com.example.websevicedemo.global.utils.FileFolder;
 import com.example.websevicedemo.global.utils.S3FileProcessService;
 import lombok.RequiredArgsConstructor;
@@ -20,17 +20,17 @@ import java.util.UUID;
 
 @Component
 @RequiredArgsConstructor
-public class FileService {
+public class BoardFileService {
 
     private final S3Uploader s3Uploader;
     private final S3FileProcessService s3FileProcessService;
 
 
-    public List<Files> fileInfo(
+    public List<BoardFiles> fileInfo(
             List<MultipartFile> multipartFiles
     )throws Exception {
         // 반환할 파일 리스트
-        List<Files> fileList = new ArrayList<>();
+        List<BoardFiles> fileList = new ArrayList<>();
 
         // 전달되어 온 파일이 존재할 경우
         if(!CollectionUtils.isEmpty(multipartFiles)) {
@@ -94,7 +94,7 @@ public class FileService {
 
 
                 // 파일 DTO 생성
-                FilesDto filesDto = FilesDto.builder()
+                BoardFilesDto boardFilesDto = BoardFilesDto.builder()
                         .originFileName(multipartFile.getOriginalFilename())
 //                        .filePath(path + File.separator + fileName)
                         .filePath(storedPath)
@@ -102,14 +102,14 @@ public class FileService {
                         .build();
 
                 // 파일 DTO 이용하여 Photo 엔티티 생성
-                Files files = new Files(
-                        filesDto.getOriginFileName(),
-                        filesDto.getFilePath(),
-                        filesDto.getFileSize()
+                BoardFiles boardFiles = new BoardFiles(
+                        boardFilesDto.getOriginFileName(),
+                        boardFilesDto.getFilePath(),
+                        boardFilesDto.getFileSize()
                 );
 
                 // 생성 후 리스트에 추가
-                fileList.add(files);
+                fileList.add(boardFiles);
 
 //                // 업로드 한 파일 데이터를 지정한 파일에 저장
 //                file = new File(absolutePath + path + File.separator + fileName);

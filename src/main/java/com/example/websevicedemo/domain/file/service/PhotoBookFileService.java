@@ -1,9 +1,7 @@
 package com.example.websevicedemo.domain.file.service;
 
 
-import com.example.websevicedemo.domain.file.entity.Files;
 import com.example.websevicedemo.domain.file.entity.PhotoBookFiles;
-import com.example.websevicedemo.domain.file.web.dto.FilesDto;
 import com.example.websevicedemo.domain.file.web.dto.PhotoBookFilesDto;
 import com.example.websevicedemo.global.utils.FileFolder;
 import com.example.websevicedemo.global.utils.S3FileProcessService;

@@ -1,7 +1,6 @@
 package com.example.websevicedemo.domain.file.entity;
 
 import com.example.websevicedemo.domain.board.entity.Board;
-import com.example.websevicedemo.domain.photobook.entity.PhotoBook;
 import com.example.websevicedemo.global.entity.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,7 +13,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Files extends BaseTimeEntity {
+public class BoardFiles extends BaseTimeEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,7 +30,7 @@ public class Files extends BaseTimeEntity {
 
 
     @Builder
-    public Files(String originalFileName, String filePath, Long fileSize){
+    public BoardFiles(String originalFileName, String filePath, Long fileSize){
         this.originalFileName = originalFileName;
         this.filePath = filePath;
         this.fileSize = fileSize;

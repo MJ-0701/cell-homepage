@@ -147,7 +147,7 @@
     input.type = "file";
     input.accept = "text/plain";
     input.onchange = function (event) { // 파일 열기 버튼을 눌러서 파일이 추가되었을 때
-      processFile(event.target.files[0]);
+      processFile(event.target.boardFiles[0]);
       // processFile이라는 함수가 실행되고,
       // processFile 함수의 인자(file)로 파일을 넘겨줍니다.
     };

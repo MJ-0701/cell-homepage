@@ -1,6 +1,5 @@
 package com.example.websevicedemo.domain.photobook.entity;
 
-import com.example.websevicedemo.domain.file.entity.Files;
 import com.example.websevicedemo.domain.file.entity.PhotoBookFiles;
 import com.example.websevicedemo.global.entity.BaseTimeEntity;
 import lombok.*;

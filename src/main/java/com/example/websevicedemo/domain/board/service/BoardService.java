@@ -3,9 +3,9 @@ package com.example.websevicedemo.domain.board.service;
 import com.example.websevicedemo.domain.board.entity.Board;
 import com.example.websevicedemo.domain.board.entity.repository.BoardRepository;
 import com.example.websevicedemo.domain.board.web.dto.BoardDto;
-import com.example.websevicedemo.domain.file.entity.Files;
-import com.example.websevicedemo.domain.file.entity.repository.FilesRepository;
-import com.example.websevicedemo.domain.file.service.FileService;
+import com.example.websevicedemo.domain.file.entity.BoardFiles;
+import com.example.websevicedemo.domain.file.entity.repository.BoardFilesRepository;
+import com.example.websevicedemo.domain.file.service.BoardFileService;
 import com.example.websevicedemo.domain.file.service.S3Uploader;
 import com.example.websevicedemo.global.utils.FileFolder;
 import com.example.websevicedemo.global.utils.S3FileProcessService;
@@ -24,8 +24,8 @@ import java.util.List;
 public class BoardService {
 
     private final BoardRepository boardRepository;
-    private final FilesRepository filesRepository;
-    private final FileService fileService;
+    private final BoardFilesRepository boardFilesRepository;
+    private final BoardFileService boardFileService;
     private final S3Uploader s3Uploader;
     private final S3FileProcessService s3FileProcessService;
 
@@ -42,12 +42,12 @@ public class BoardService {
                 .password(dto.getPassword())
                 .build();
 
-        List<Files> filesList = fileService.fileInfo(dto.getFiles());
+        List<BoardFiles> boardFilesList = boardFileService.fileInfo(dto.getFiles());
         // 파일이 존재할 때에만 처리
-        if(!filesList.isEmpty()) {
-            for(Files file : filesList) {
+        if(!boardFilesList.isEmpty()) {
+            for(BoardFiles file : boardFilesList) {
                 // 파일을 DB에 저장
-                board.addFiles(filesRepository.save(file));
+                board.addFiles(boardFilesRepository.save(file));
             }
         }
 

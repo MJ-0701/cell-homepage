@@ -2,7 +2,7 @@ package com.example.websevicedemo.domain.board.entity;
 
 
 import com.example.websevicedemo.domain.comment.entity.Comment;
-import com.example.websevicedemo.domain.file.entity.Files;
+import com.example.websevicedemo.domain.file.entity.BoardFiles;
 import com.example.websevicedemo.global.entity.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
@@ -41,7 +41,7 @@ public class Board extends BaseTimeEntity {
     private List<Comment> commentList = new ArrayList<>();
 
     @OneToMany(mappedBy = "board", cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
-    private List<Files> files = new ArrayList<>();
+    private List<BoardFiles> files = new ArrayList<>();
 
     private String imageUrl;
 
@@ -58,13 +58,13 @@ public class Board extends BaseTimeEntity {
     }
 
     // Board에서 파일 처리 위함.
-    public void addFiles(Files files){
-        this.files.add(files);
+    public void addFiles(BoardFiles boardFiles){
+        this.files.add(boardFiles);
 
         // 게시글에 파일이 저장되어있지 않은 경우
-        if(files.getBoard() != this){
+        if(boardFiles.getBoard() != this){
             // 파일 저장
-            files.setBoard(this);
+            boardFiles.setBoard(this);
         }
     }
 

@@ -1,12 +1,7 @@
 package com.example.websevicedemo.domain.photobook.service;
 
-import com.example.websevicedemo.domain.board.entity.Board;
-import com.example.websevicedemo.domain.board.web.dto.BoardDto;
-import com.example.websevicedemo.domain.file.entity.Files;
 import com.example.websevicedemo.domain.file.entity.PhotoBookFiles;
-import com.example.websevicedemo.domain.file.entity.repository.FilesRepository;
 import com.example.websevicedemo.domain.file.entity.repository.PhotoBookFilesRepository;
-import com.example.websevicedemo.domain.file.service.FileService;
 import com.example.websevicedemo.domain.file.service.PhotoBookFileService;
 import com.example.websevicedemo.domain.photobook.entity.PhotoBook;
 import com.example.websevicedemo.domain.photobook.entity.repository.PhotoBookRepository;
@@ -15,7 +10,6 @@ import com.example.websevicedemo.domain.photobook.web.dto.PhotoBookFileDto;
 import com.example.websevicedemo.domain.photobook.web.dto.PhotoBookSearchCondition;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

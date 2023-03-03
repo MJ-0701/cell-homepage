@@ -12,6 +12,7 @@ import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 import org.springframework.data.support.PageableExecutionUtils;
 
 import javax.persistence.EntityManager;
@@ -21,7 +22,7 @@ import static com.example.websevicedemo.domain.file.entity.QPhotoBookFiles.photo
 import static com.example.websevicedemo.domain.photobook.entity.QPhotoBook.photoBook;
 import static io.jsonwebtoken.lang.Strings.hasText;
 
-public class PhotoBookRepositoryImpl extends QuerydslSupportCustom implements PhotoBookRepositoryCustom{
+public class PhotoBookRepositoryImpl extends QuerydslRepositorySupport implements PhotoBookRepositoryCustom{
 
     private final JPAQueryFactory queryFactory;
 

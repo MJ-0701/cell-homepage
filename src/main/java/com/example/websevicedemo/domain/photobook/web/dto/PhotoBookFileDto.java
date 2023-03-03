@@ -2,12 +2,14 @@ package com.example.websevicedemo.domain.photobook.web.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.querydsl.core.annotations.QueryProjection;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Data
+@Schema(description = "쿼리 dsl 조회용 조인 DTO")
 public class PhotoBookFileDto {
 
     @JsonProperty("photo_book_id")

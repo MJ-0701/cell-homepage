@@ -24,8 +24,8 @@
                 <input type="text" class="form-control" id="title" name="title" placeholder="제목을 입력하세요.">
             </div>
             <div class="form-group">
-                <label for="files">사진</label>
-                <input type="file" class="form-control" id="files" name="files" placeholder="사진을 입력해 주세요." required>
+                <label for="boardFiles">사진</label>
+                <input type="file" class="form-control" id="boardFiles" name="boardFiles" placeholder="사진을 입력해 주세요." required>
             </div>
             <div class="form-group">
                 <label for="contents">내용</label>
@@ -54,6 +54,7 @@
             type: 'POST',
             url: '/api/v1/photo-book/save',
             data: formData,
+            async: false,
             contentType : false,
             processData : false
         }).done(function (data) {
