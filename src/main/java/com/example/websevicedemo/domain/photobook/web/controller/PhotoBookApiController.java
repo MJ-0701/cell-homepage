@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -27,6 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
         @ApiResponse(responseCode = "404", description = "NOT FOUND"),
         @ApiResponse(responseCode = "500", description = "INTERNAL SERVER ERROR")
 })
+@Slf4j
 public class PhotoBookApiController {
 
     private final PhotoBookService photoBookService;
@@ -37,7 +39,7 @@ public class PhotoBookApiController {
     public Long photoBookSave(
             PhotoBookDto photoBookDto
     ) throws Exception {
-
+        log.info("photoBookDto : {}", photoBookDto);
         return photoBookService.create(photoBookDto);
     }
 
