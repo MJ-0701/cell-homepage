@@ -1,15 +1,13 @@
 package com.example.websevicedemo.domain.test.entity;
 
 import com.example.websevicedemo.domain.test.web.dto.TestDto;
+import com.example.websevicedemo.domain.user.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -29,6 +27,10 @@ public class Test {
     private String nationality;
 
     private Boolean schoolAttended;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 
 
     public void testUpdate(TestDto dto) {

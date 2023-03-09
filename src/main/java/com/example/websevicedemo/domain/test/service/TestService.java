@@ -1,9 +1,14 @@
 package com.example.websevicedemo.domain.test.service;
 
 import com.example.websevicedemo.domain.test.entity.Test;
-import com.example.websevicedemo.domain.test.entity.TestRepository;
+import com.example.websevicedemo.domain.test.entity.repository.TestRepository;
 import com.example.websevicedemo.domain.test.web.dto.TestDto;
+import com.example.websevicedemo.domain.test.web.dto.TestSearchCondition;
+import com.example.websevicedemo.domain.test.web.dto.UserTestDto;
+import com.example.websevicedemo.domain.test.web.dto.UserTestSearchCondition;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -46,6 +51,26 @@ public class TestService {
     public void delete(Long id) {
         Test test = testRepository.findById(id).orElseThrow();
         testRepository.delete(test);
+    }
+
+    @Transactional(readOnly = true)
+    public List<TestDto> searchCondition(TestSearchCondition condition) {
+        return testRepository.search(condition);
+    }
+
+    @Transactional(readOnly = true)
+    public List<UserTestDto> userTestLeftJoinSearch(UserTestSearchCondition condition) {
+        return testRepository.userTestLeftJoin(condition);
+    }
+
+    @Transactional(readOnly = true)
+    public List<UserTestDto> userTestThetaJoin(UserTestSearchCondition condition) {
+        return testRepository.userTestThetaJoin(condition);
+    }
+
+    @Transactional(readOnly = true)
+    public Page<UserTestDto> userTestPaging(UserTestSearchCondition condition, Pageable pageable) {
+        return testRepository.userTestPageComplex(condition, pageable);
     }
 
 }

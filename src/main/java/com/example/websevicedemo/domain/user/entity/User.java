@@ -1,10 +1,13 @@
 package com.example.websevicedemo.domain.user.entity;
 
+import com.example.websevicedemo.domain.test.entity.Test;
 import com.example.websevicedemo.global.entity.BaseTimeEntity;
 import lombok.*;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Builder
@@ -28,6 +31,9 @@ public class User extends BaseTimeEntity implements UserDetails{
     private String nickName;
 
     private String callNumber;
+
+    @OneToMany(mappedBy = "user")
+    private List<Test> testList = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

@@ -1197,3 +1197,608 @@ select photobook0_.id as col_0_0_, photobook0_.title as col_1_0_, photobook0_.co
 2023-03-09 20:41:47.484  INFO 2950 --- [http-nio-8080-exec-4] p6spy                                    : #1678362107484 | took 9ms | commit | connection 5| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
 
 ;
+2023-03-09 21:48:41.113  INFO 2950 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-09 21:48:41.115 TRACE 2950 --- [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@758d4aa9] for TypeConfiguration
+2023-03-09 21:48:41.115 DEBUG 2950 --- [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@4a07a560] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@758d4aa9]
+2023-03-09 21:48:41.120  INFO 2950 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-09 21:48:41.221  INFO 2950 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-03-09 23:38:14.628  INFO 11210 --- [main] c.e.w.WebSeviceDemoApplication           : Starting WebSeviceDemoApplication using Java 11.0.13 on chaemyeongjeong-ui-MacBookAir.local with PID 11210 (/Users/chaemyeongjeong/IdeaProjects/web-service-demo/build/classes/java/main started by chaemyeongjeong in /Users/chaemyeongjeong/IdeaProjects/web-service-demo)
+2023-03-09 23:38:14.630  INFO 11210 --- [main] c.e.w.WebSeviceDemoApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-03-09 23:38:15.553  INFO 11210 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-09 23:38:15.642  INFO 11210 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 8 JPA repository interfaces.
+2023-03-09 23:38:15.784  WARN 11210 --- [main] com.amazonaws.util.EC2MetadataUtils      : Unable to retrieve the requested metadata (/latest/meta-data/instance-id). EC2 Instance Metadata Service is disabled
+
+com.amazonaws.AmazonClientException: EC2 Instance Metadata Service is disabled
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:65) ~[aws-java-sdk-core-1.11.792.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66) ~[aws-java-sdk-core-1.11.792.jar:na]
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:402) ~[aws-java-sdk-core-1.11.792.jar:na]
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:371) ~[aws-java-sdk-core-1.11.792.jar:na]
+	at org.springframework.cloud.aws.context.support.env.AwsCloudEnvironmentCheckUtils.isRunningOnCloudEnvironment(AwsCloudEnvironmentCheckUtils.java:38) ~[spring-cloud-aws-context-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.aws.context.annotation.OnAwsCloudEnvironmentCondition.matches(OnAwsCloudEnvironmentCondition.java:38) ~[spring-cloud-aws-context-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:489) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:140) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at com.example.websevicedemo.WebSeviceDemoApplication.main(WebSeviceDemoApplication.java:10) ~[main/:na]
+
+2023-03-09 23:38:16.105  INFO 11210 --- [main] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#4b0bd001' of type [com.amazonaws.auth.BasicAWSCredentials] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-09 23:38:16.106  INFO 11210 --- [main] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#80b122b' of type [com.amazonaws.auth.AWSStaticCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-09 23:38:16.113  INFO 11210 --- [main] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#6d6d480c' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-09 23:38:16.118  INFO 11210 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-09 23:38:16.118  INFO 11210 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-09 23:38:16.408  INFO 11210 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-09 23:38:16.416  INFO 11210 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-09 23:38:16.416  INFO 11210 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-03-09 23:38:16.551  INFO 11210 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-09 23:38:16.552  INFO 11210 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1874 ms
+2023-03-09 23:38:16.859  INFO 11210 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-09 23:38:16.884  INFO 11210 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-03-09 23:38:16.961  INFO 11210 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-09 23:38:16.973 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@3ad847f8
+2023-03-09 23:38:16.973 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@3ad847f8
+2023-03-09 23:38:16.973 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@3ad847f8
+2023-03-09 23:38:16.974 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@266da047
+2023-03-09 23:38:16.974 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.TrueFalseType@ec5f944
+2023-03-09 23:38:16.974 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.YesNoType@18dd7767
+2023-03-09 23:38:16.975 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@5b3518e1
+2023-03-09 23:38:16.975 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@5b3518e1
+2023-03-09 23:38:16.975 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@5b3518e1
+2023-03-09 23:38:16.976 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.CharacterType@75ed7512
+2023-03-09 23:38:16.976 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.CharacterType@75ed7512
+2023-03-09 23:38:16.976 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@75ed7512
+2023-03-09 23:38:16.976 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@7ab33ca8
+2023-03-09 23:38:16.976 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@7ab33ca8
+2023-03-09 23:38:16.976 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7ab33ca8
+2023-03-09 23:38:16.977 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.IntegerType@709d86a2
+2023-03-09 23:38:16.977 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.IntegerType@709d86a2
+2023-03-09 23:38:16.977 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@709d86a2
+2023-03-09 23:38:16.977 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@3e8b8f0
+2023-03-09 23:38:16.978 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@3e8b8f0
+2023-03-09 23:38:16.978 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.LongType@3e8b8f0
+2023-03-09 23:38:16.978 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@4b98225c
+2023-03-09 23:38:16.981 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@4b98225c
+2023-03-09 23:38:16.981 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4b98225c
+2023-03-09 23:38:16.982 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@5aab5b31
+2023-03-09 23:38:16.982 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@5aab5b31
+2023-03-09 23:38:16.982 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@5aab5b31
+2023-03-09 23:38:16.982 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@4e4d0a0b
+2023-03-09 23:38:16.982 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@4e4d0a0b
+2023-03-09 23:38:16.983 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BigIntegerType@6d420cdd
+2023-03-09 23:38:16.983 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@6d420cdd
+2023-03-09 23:38:16.984 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.StringType@2bb0e277
+2023-03-09 23:38:16.984 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.StringType@2bb0e277
+2023-03-09 23:38:16.984 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.StringNVarcharType@2cea921a
+2023-03-09 23:38:16.984 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@78545d40
+2023-03-09 23:38:16.985 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.UrlType@32b112a1
+2023-03-09 23:38:16.985 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.UrlType@32b112a1
+2023-03-09 23:38:16.985 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.DurationType@41582899
+2023-03-09 23:38:16.986 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.DurationType@41582899
+2023-03-09 23:38:16.986 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Instant -> org.hibernate.type.InstantType@696174d3
+2023-03-09 23:38:16.986 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.InstantType@696174d3
+2023-03-09 23:38:16.987 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@714f1a44
+2023-03-09 23:38:16.987 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@714f1a44
+2023-03-09 23:38:16.987 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.LocalDateType@45bd4753
+2023-03-09 23:38:16.987 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@45bd4753
+2023-03-09 23:38:16.988 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@58aa5c94
+2023-03-09 23:38:16.988 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@58aa5c94
+2023-03-09 23:38:16.989 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@473847fb
+2023-03-09 23:38:16.989 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@473847fb
+2023-03-09 23:38:16.989 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@74b97416
+2023-03-09 23:38:16.989 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@74b97416
+2023-03-09 23:38:16.990 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@d3cce46
+2023-03-09 23:38:16.990 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@d3cce46
+2023-03-09 23:38:16.991 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.DateType@699d96bc
+2023-03-09 23:38:16.991 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.DateType@699d96bc
+2023-03-09 23:38:16.991 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.TimeType@d120d7c
+2023-03-09 23:38:16.992 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.TimeType@d120d7c
+2023-03-09 23:38:16.992 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.TimestampType@a5e8260
+2023-03-09 23:38:16.993 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@a5e8260
+2023-03-09 23:38:16.993 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.TimestampType@a5e8260
+2023-03-09 23:38:16.993 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@243c4346
+2023-03-09 23:38:16.994 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.CalendarType@63553e9f
+2023-03-09 23:38:16.994 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@63553e9f
+2023-03-09 23:38:16.994 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@63553e9f
+2023-03-09 23:38:16.995 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@5c839677
+2023-03-09 23:38:16.995 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@6e73974
+2023-03-09 23:38:16.996 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.LocaleType@7adae08e
+2023-03-09 23:38:16.996 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@7adae08e
+2023-03-09 23:38:16.996 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.CurrencyType@b1d19ff
+2023-03-09 23:38:16.997 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@b1d19ff
+2023-03-09 23:38:16.997 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.TimeZoneType@5834198f
+2023-03-09 23:38:16.997 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@5834198f
+2023-03-09 23:38:16.997 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.ClassType@38022758
+2023-03-09 23:38:16.997 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.ClassType@38022758
+2023-03-09 23:38:16.998 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@14485747
+2023-03-09 23:38:16.998 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@14485747
+2023-03-09 23:38:16.998 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@26d028f7
+2023-03-09 23:38:16.998 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BinaryType@20027c44
+2023-03-09 23:38:16.998 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BinaryType@20027c44
+2023-03-09 23:38:16.999 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BinaryType@20027c44
+2023-03-09 23:38:16.999 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@3b5da0b0
+2023-03-09 23:38:16.999 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@3b5da0b0
+2023-03-09 23:38:16.999 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@3b5da0b0
+2023-03-09 23:38:16.999 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.RowVersionType@bb12f41
+2023-03-09 23:38:16.999 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.ImageType@285bf5ac
+2023-03-09 23:38:17.000 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.CharArrayType@141bb6b8
+2023-03-09 23:38:17.000 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.CharArrayType@141bb6b8
+2023-03-09 23:38:17.000 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.CharArrayType@141bb6b8
+2023-03-09 23:38:17.001 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@329b331f
+2023-03-09 23:38:17.001 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@329b331f
+2023-03-09 23:38:17.001 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@329b331f
+2023-03-09 23:38:17.001 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.TextType@1f26b992
+2023-03-09 23:38:17.001 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.NTextType@4e6cbdf1
+2023-03-09 23:38:17.002 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BlobType@678586f0
+2023-03-09 23:38:17.002 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@678586f0
+2023-03-09 23:38:17.002 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@786ff0ea
+2023-03-09 23:38:17.003 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.ClobType@4b3ad7ca
+2023-03-09 23:38:17.003 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@4b3ad7ca
+2023-03-09 23:38:17.004 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.NClobType@4afdfc0f
+2023-03-09 23:38:17.004 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4afdfc0f
+2023-03-09 23:38:17.005 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@60652518
+2023-03-09 23:38:17.006 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@5ed65e4b
+2023-03-09 23:38:17.007 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.SerializableType@1e471884
+2023-03-09 23:38:17.008 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.ObjectType@6451a288
+2023-03-09 23:38:17.008 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@6451a288
+2023-03-09 23:38:17.008 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@7198ab9a
+2023-03-09 23:38:17.009 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@67d5ac2f
+2023-03-09 23:38:17.009 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@25109608
+2023-03-09 23:38:17.009 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@1d637673
+2023-03-09 23:38:17.009 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@2913ca3e
+2023-03-09 23:38:17.009 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@636dbfe7
+2023-03-09 23:38:17.009 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@42ecc554
+2023-03-09 23:38:17.009 DEBUG 11210 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@443af394
+2023-03-09 23:38:17.034  INFO 11210 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-09 23:38:17.691  INFO 11210 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-09 23:38:17.708  INFO 11210 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-03-09 23:38:17.730 DEBUG 11210 --- [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@34bddf43] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@57839834]
+2023-03-09 23:38:17.955 DEBUG 11210 --- [main] org.hibernate.type.EnumType              : Using NAMED-based conversion for Enum com.example.websevicedemo.domain.user.entity.Role
+2023-03-09 23:38:17.956 DEBUG 11210 --- [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@34bddf43] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@9cb927e]
+2023-03-09 23:38:18.409  INFO 11210 --- [main] p6spy                                    : #1678372698409 | took 98ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table board_files drop foreign key FKeid4fkvt2o44moyaupmbndhnw
+alter table board_files drop foreign key FKeid4fkvt2o44moyaupmbndhnw;
+2023-03-09 23:38:18.447  INFO 11210 --- [main] p6spy                                    : #1678372698447 | took 36ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table comment drop foreign key FKlij9oor1nav89jeat35s6kbp1
+alter table comment drop foreign key FKlij9oor1nav89jeat35s6kbp1;
+2023-03-09 23:38:18.479  INFO 11210 --- [main] p6spy                                    : #1678372698479 | took 32ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table photo_book_files drop foreign key FK5a6j09irfdqbpegqrdslmnvvt
+alter table photo_book_files drop foreign key FK5a6j09irfdqbpegqrdslmnvvt;
+2023-03-09 23:38:18.517  INFO 11210 --- [main] p6spy                                    : #1678372698517 | took 37ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table re_comment drop foreign key FKlbau13r2qs2dvla5g9k3xnmpd
+alter table re_comment drop foreign key FKlbau13r2qs2dvla5g9k3xnmpd;
+2023-03-09 23:38:18.551  INFO 11210 --- [main] p6spy                                    : #1678372698551 | took 33ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table test drop foreign key FKswx8tgvx4biygw60uqgjjq7a7
+alter table test drop foreign key FKswx8tgvx4biygw60uqgjjq7a7;
+2023-03-09 23:38:18.553  WARN 11210 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table test drop foreign key FKswx8tgvx4biygw60uqgjjq7a7" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table test drop foreign key FKswx8tgvx4biygw60uqgjjq7a7" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at com.example.websevicedemo.WebSeviceDemoApplication.main(WebSeviceDemoApplication.java:10) ~[main/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Can't DROP 'FKswx8tgvx4biygw60uqgjjq7a7'; check that column/key exists
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-j-8.0.31.jar:8.0.31]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at com.p6spy.engine.wrapper.StatementWrapper.execute(StatementWrapper.java:114) ~[p6spy-3.8.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
+	... 35 common frames omitted
+
+2023-03-09 23:38:18.606  INFO 11210 --- [main] p6spy                                    : #1678372698606 | took 52ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table user_authority drop foreign key USER_IDX
+alter table user_authority drop foreign key USER_IDX;
+2023-03-09 23:38:18.650  INFO 11210 --- [main] p6spy                                    : #1678372698650 | took 43ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists board
+drop table if exists board;
+2023-03-09 23:38:18.689  INFO 11210 --- [main] p6spy                                    : #1678372698689 | took 38ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists board_files
+drop table if exists board_files;
+2023-03-09 23:38:18.726  INFO 11210 --- [main] p6spy                                    : #1678372698726 | took 36ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists comment
+drop table if exists comment;
+2023-03-09 23:38:18.762  INFO 11210 --- [main] p6spy                                    : #1678372698761 | took 35ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists photo_book
+drop table if exists photo_book;
+2023-03-09 23:38:18.794  INFO 11210 --- [main] p6spy                                    : #1678372698794 | took 32ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists photo_book_files
+drop table if exists photo_book_files;
+2023-03-09 23:38:18.829  INFO 11210 --- [main] p6spy                                    : #1678372698829 | took 34ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists re_comment
+drop table if exists re_comment;
+2023-03-09 23:38:18.861  INFO 11210 --- [main] p6spy                                    : #1678372698861 | took 31ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists test
+drop table if exists test;
+2023-03-09 23:38:18.898  INFO 11210 --- [main] p6spy                                    : #1678372698898 | took 36ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists user
+drop table if exists user;
+2023-03-09 23:38:18.943  INFO 11210 --- [main] p6spy                                    : #1678372698943 | took 44ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists user_authority
+drop table if exists user_authority;
+2023-03-09 23:38:19.020  INFO 11210 --- [main] p6spy                                    : #1678372699020 | took 72ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table board (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), contents longtext, declaration bit not null, image_url varchar(255), like_count integer not null, nick_name varchar(255), password varchar(255), title varchar(255), user_id varchar(255), view_count integer not null, primary key (id)) engine=InnoDB
+create table board (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), contents longtext, declaration bit not null, image_url varchar(255), like_count integer not null, nick_name varchar(255), password varchar(255), title varchar(255), user_id varchar(255), view_count integer not null, primary key (id)) engine=InnoDB;
+2023-03-09 23:38:19.091  INFO 11210 --- [main] p6spy                                    : #1678372699091 | took 70ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table board_files (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), file_path varchar(255), file_size bigint, original_file_name varchar(255), board_id bigint, primary key (id)) engine=InnoDB
+create table board_files (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), file_path varchar(255), file_size bigint, original_file_name varchar(255), board_id bigint, primary key (id)) engine=InnoDB;
+2023-03-09 23:38:19.140  INFO 11210 --- [main] p6spy                                    : #1678372699140 | took 47ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table comment (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), comment varchar(255), reply_id varchar(255), reply_pwd varchar(255), board_id bigint, primary key (id)) engine=InnoDB
+create table comment (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), comment varchar(255), reply_id varchar(255), reply_pwd varchar(255), board_id bigint, primary key (id)) engine=InnoDB;
+2023-03-09 23:38:19.200  INFO 11210 --- [main] p6spy                                    : #1678372699200 | took 56ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table photo_book (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), contents varchar(255), title varchar(255), primary key (id)) engine=InnoDB
+create table photo_book (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), contents varchar(255), title varchar(255), primary key (id)) engine=InnoDB;
+2023-03-09 23:38:19.260  INFO 11210 --- [main] p6spy                                    : #1678372699260 | took 57ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table photo_book_files (id bigint not null auto_increment, file_path varchar(255), file_size bigint, original_file_name varchar(255), photo_book_id bigint, primary key (id)) engine=InnoDB
+create table photo_book_files (id bigint not null auto_increment, file_path varchar(255), file_size bigint, original_file_name varchar(255), photo_book_id bigint, primary key (id)) engine=InnoDB;
+2023-03-09 23:38:19.319  INFO 11210 --- [main] p6spy                                    : #1678372699319 | took 55ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table re_comment (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), re_comment varchar(255), reply_id varchar(255), reply_pwd varchar(255), comment_id bigint, primary key (id)) engine=InnoDB
+create table re_comment (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), re_comment varchar(255), reply_id varchar(255), reply_pwd varchar(255), comment_id bigint, primary key (id)) engine=InnoDB;
+2023-03-09 23:38:19.374  INFO 11210 --- [main] p6spy                                    : #1678372699374 | took 54ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table test (id bigint not null auto_increment, age integer, job varchar(255), nationality varchar(255), school_attended bit, user_id bigint, primary key (id)) engine=InnoDB
+create table test (id bigint not null auto_increment, age integer, job varchar(255), nationality varchar(255), school_attended bit, user_id bigint, primary key (id)) engine=InnoDB;
+2023-03-09 23:38:19.431  INFO 11210 --- [main] p6spy                                    : #1678372699431 | took 52ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table user (user_idx bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), birth varchar(255), call_number varchar(255), email varchar(255), nick_name varchar(255), role varchar(255) not null, user_name varchar(255), primary key (user_idx)) engine=InnoDB
+create table user (user_idx bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), birth varchar(255), call_number varchar(255), email varchar(255), nick_name varchar(255), role varchar(255) not null, user_name varchar(255), primary key (user_idx)) engine=InnoDB;
+2023-03-09 23:38:19.485  INFO 11210 --- [main] p6spy                                    : #1678372699485 | took 52ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table user_authority (id bigint not null, authority varchar(255) not null, user_idx bigint, primary key (id, authority)) engine=InnoDB
+create table user_authority (id bigint not null, authority varchar(255) not null, user_idx bigint, primary key (id, authority)) engine=InnoDB;
+2023-03-09 23:38:19.579  INFO 11210 --- [main] p6spy                                    : #1678372699579 | took 92ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table board_files add constraint FKeid4fkvt2o44moyaupmbndhnw foreign key (board_id) references board (id)
+alter table board_files add constraint FKeid4fkvt2o44moyaupmbndhnw foreign key (board_id) references board (id);
+2023-03-09 23:38:19.669  INFO 11210 --- [main] p6spy                                    : #1678372699669 | took 89ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table comment add constraint FKlij9oor1nav89jeat35s6kbp1 foreign key (board_id) references board (id)
+alter table comment add constraint FKlij9oor1nav89jeat35s6kbp1 foreign key (board_id) references board (id);
+2023-03-09 23:38:19.781  INFO 11210 --- [main] p6spy                                    : #1678372699781 | took 111ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table photo_book_files add constraint FK5a6j09irfdqbpegqrdslmnvvt foreign key (photo_book_id) references photo_book (id)
+alter table photo_book_files add constraint FK5a6j09irfdqbpegqrdslmnvvt foreign key (photo_book_id) references photo_book (id);
+2023-03-09 23:38:19.864  INFO 11210 --- [main] p6spy                                    : #1678372699864 | took 81ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table re_comment add constraint FKlbau13r2qs2dvla5g9k3xnmpd foreign key (comment_id) references comment (id)
+alter table re_comment add constraint FKlbau13r2qs2dvla5g9k3xnmpd foreign key (comment_id) references comment (id);
+2023-03-09 23:38:19.966  INFO 11210 --- [main] p6spy                                    : #1678372699966 | took 100ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table test add constraint FKswx8tgvx4biygw60uqgjjq7a7 foreign key (user_id) references user (user_idx)
+alter table test add constraint FKswx8tgvx4biygw60uqgjjq7a7 foreign key (user_id) references user (user_idx);
+2023-03-09 23:38:20.103  INFO 11210 --- [main] p6spy                                    : #1678372700102 | took 135ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table user_authority add constraint USER_IDX foreign key (user_idx) references user (user_idx)
+alter table user_authority add constraint USER_IDX foreign key (user_idx) references user (user_idx);
+2023-03-09 23:38:20.110  INFO 11210 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-09 23:38:20.123 TRACE 11210 --- [main] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@9cb927e] for TypeConfiguration
+2023-03-09 23:38:20.125  INFO 11210 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-09 23:38:20.554  WARN 11210 --- [main] c.a.a.p.i.BasicProfileConfigLoader       : Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+2023-03-09 23:38:20.556  WARN 11210 --- [main] c.a.a.p.i.BasicProfileConfigLoader       : Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+2023-03-09 23:38:20.575  WARN 11210 --- [main] c.a.a.p.i.BasicProfileConfigLoader       : Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+2023-03-09 23:38:20.575  WARN 11210 --- [main] c.a.a.p.i.BasicProfileConfigLoader       : Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+2023-03-09 23:38:20.665  WARN 11210 --- [main] c.a.a.p.i.BasicProfileConfigLoader       : Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+2023-03-09 23:38:20.665  WARN 11210 --- [main] c.a.a.p.i.BasicProfileConfigLoader       : Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+2023-03-09 23:38:21.069  INFO 11210 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Or [Ant [pattern='/resources/**']] with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57eb2555, org.springframework.security.web.header.HeaderWriterFilter@24347d8b, org.springframework.security.web.csrf.CsrfFilter@2cc82c83, org.springframework.security.web.authentication.logout.LogoutFilter@16422f27, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54d116d5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@490f2fad, org.springframework.security.web.access.ExceptionTranslationFilter@66ab3716, org.springframework.security.web.access.intercept.AuthorizationFilter@3d6c7152]
+2023-03-09 23:38:21.096  INFO 11210 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c8f5262, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bca6c4c, org.springframework.security.web.context.SecurityContextPersistenceFilter@73bd146c, org.springframework.security.web.header.HeaderWriterFilter@7305a443, org.springframework.web.filter.CorsFilter@7de2c19c, org.springframework.security.web.authentication.logout.LogoutFilter@7bc239db, com.example.websevicedemo.global.config.jwt.JwtAuthenticationFilter@5dcec8e9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3437fc4f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42a198dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4bc49d70, org.springframework.security.web.session.SessionManagementFilter@307ba188, org.springframework.security.web.access.ExceptionTranslationFilter@7bbe5548, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@39303a6]
+2023-03-09 23:38:21.198  WARN 11210 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-09 23:38:21.354  INFO 11210 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-03-09 23:38:22.274  INFO 11210 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-09 23:38:22.289  INFO 11210 --- [main] c.e.w.WebSeviceDemoApplication           : Started WebSeviceDemoApplication in 8.194 seconds (JVM running for 9.375)
+2023-03-09 23:38:24.804  INFO 11210 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-09 23:38:24.807 TRACE 11210 --- [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@9cb927e] for TypeConfiguration
+2023-03-09 23:38:24.807 DEBUG 11210 --- [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@17be3391] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@9cb927e]
+2023-03-09 23:38:24.811  INFO 11210 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-09 23:38:24.914  INFO 11210 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-03-09 23:47:41.890  INFO 11593 --- [main] c.e.w.WebSeviceDemoApplication           : Starting WebSeviceDemoApplication using Java 11.0.13 on chaemyeongjeong-ui-MacBookAir.local with PID 11593 (/Users/chaemyeongjeong/IdeaProjects/web-service-demo/build/classes/java/main started by chaemyeongjeong in /Users/chaemyeongjeong/IdeaProjects/web-service-demo)
+2023-03-09 23:47:41.892  INFO 11593 --- [main] c.e.w.WebSeviceDemoApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-03-09 23:47:42.753  INFO 11593 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-09 23:47:42.836  INFO 11593 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 8 JPA repository interfaces.
+2023-03-09 23:47:42.978  WARN 11593 --- [main] com.amazonaws.util.EC2MetadataUtils      : Unable to retrieve the requested metadata (/latest/meta-data/instance-id). EC2 Instance Metadata Service is disabled
+
+com.amazonaws.AmazonClientException: EC2 Instance Metadata Service is disabled
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:65) ~[aws-java-sdk-core-1.11.792.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66) ~[aws-java-sdk-core-1.11.792.jar:na]
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:402) ~[aws-java-sdk-core-1.11.792.jar:na]
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:371) ~[aws-java-sdk-core-1.11.792.jar:na]
+	at org.springframework.cloud.aws.context.support.env.AwsCloudEnvironmentCheckUtils.isRunningOnCloudEnvironment(AwsCloudEnvironmentCheckUtils.java:38) ~[spring-cloud-aws-context-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.cloud.aws.context.annotation.OnAwsCloudEnvironmentCondition.matches(OnAwsCloudEnvironmentCondition.java:38) ~[spring-cloud-aws-context-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:489) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:140) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at com.example.websevicedemo.WebSeviceDemoApplication.main(WebSeviceDemoApplication.java:10) ~[main/:na]
+
+2023-03-09 23:47:43.261  INFO 11593 --- [main] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#4b0bd001' of type [com.amazonaws.auth.BasicAWSCredentials] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-09 23:47:43.262  INFO 11593 --- [main] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#80b122b' of type [com.amazonaws.auth.AWSStaticCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-09 23:47:43.269  INFO 11593 --- [main] trationDelegate$BeanPostProcessorChecker : Bean '(inner bean)#6d6d480c' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-09 23:47:43.274  INFO 11593 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-09 23:47:43.275  INFO 11593 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-09 23:47:43.583  INFO 11593 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-09 23:47:43.591  INFO 11593 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-09 23:47:43.591  INFO 11593 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-03-09 23:47:43.721  INFO 11593 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-09 23:47:43.722  INFO 11593 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1782 ms
+2023-03-09 23:47:44.008  INFO 11593 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-09 23:47:44.034  INFO 11593 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-03-09 23:47:44.106  INFO 11593 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-09 23:47:44.117 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@3ad847f8
+2023-03-09 23:47:44.117 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@3ad847f8
+2023-03-09 23:47:44.117 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@3ad847f8
+2023-03-09 23:47:44.117 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@266da047
+2023-03-09 23:47:44.118 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.TrueFalseType@ec5f944
+2023-03-09 23:47:44.118 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.YesNoType@18dd7767
+2023-03-09 23:47:44.119 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@5b3518e1
+2023-03-09 23:47:44.119 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@5b3518e1
+2023-03-09 23:47:44.119 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@5b3518e1
+2023-03-09 23:47:44.119 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.CharacterType@75ed7512
+2023-03-09 23:47:44.119 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.CharacterType@75ed7512
+2023-03-09 23:47:44.119 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@75ed7512
+2023-03-09 23:47:44.120 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@7ab33ca8
+2023-03-09 23:47:44.120 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@7ab33ca8
+2023-03-09 23:47:44.120 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7ab33ca8
+2023-03-09 23:47:44.120 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.IntegerType@709d86a2
+2023-03-09 23:47:44.120 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.IntegerType@709d86a2
+2023-03-09 23:47:44.121 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@709d86a2
+2023-03-09 23:47:44.121 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@3e8b8f0
+2023-03-09 23:47:44.121 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@3e8b8f0
+2023-03-09 23:47:44.121 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.LongType@3e8b8f0
+2023-03-09 23:47:44.122 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@4b98225c
+2023-03-09 23:47:44.124 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@4b98225c
+2023-03-09 23:47:44.124 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4b98225c
+2023-03-09 23:47:44.125 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@5aab5b31
+2023-03-09 23:47:44.125 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@5aab5b31
+2023-03-09 23:47:44.125 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@5aab5b31
+2023-03-09 23:47:44.125 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@4e4d0a0b
+2023-03-09 23:47:44.126 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@4e4d0a0b
+2023-03-09 23:47:44.126 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BigIntegerType@6d420cdd
+2023-03-09 23:47:44.126 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@6d420cdd
+2023-03-09 23:47:44.127 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.StringType@2bb0e277
+2023-03-09 23:47:44.127 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.StringType@2bb0e277
+2023-03-09 23:47:44.127 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.StringNVarcharType@2cea921a
+2023-03-09 23:47:44.128 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@78545d40
+2023-03-09 23:47:44.128 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.UrlType@32b112a1
+2023-03-09 23:47:44.128 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.UrlType@32b112a1
+2023-03-09 23:47:44.128 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.DurationType@41582899
+2023-03-09 23:47:44.128 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.DurationType@41582899
+2023-03-09 23:47:44.129 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Instant -> org.hibernate.type.InstantType@696174d3
+2023-03-09 23:47:44.129 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.InstantType@696174d3
+2023-03-09 23:47:44.130 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@714f1a44
+2023-03-09 23:47:44.130 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@714f1a44
+2023-03-09 23:47:44.130 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.LocalDateType@45bd4753
+2023-03-09 23:47:44.130 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@45bd4753
+2023-03-09 23:47:44.131 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@58aa5c94
+2023-03-09 23:47:44.131 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@58aa5c94
+2023-03-09 23:47:44.132 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@473847fb
+2023-03-09 23:47:44.132 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@473847fb
+2023-03-09 23:47:44.132 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@74b97416
+2023-03-09 23:47:44.132 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@74b97416
+2023-03-09 23:47:44.133 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@d3cce46
+2023-03-09 23:47:44.133 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@d3cce46
+2023-03-09 23:47:44.134 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.DateType@699d96bc
+2023-03-09 23:47:44.134 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.DateType@699d96bc
+2023-03-09 23:47:44.134 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.TimeType@d120d7c
+2023-03-09 23:47:44.134 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.TimeType@d120d7c
+2023-03-09 23:47:44.135 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.TimestampType@a5e8260
+2023-03-09 23:47:44.136 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@a5e8260
+2023-03-09 23:47:44.136 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.TimestampType@a5e8260
+2023-03-09 23:47:44.136 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@243c4346
+2023-03-09 23:47:44.137 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.CalendarType@63553e9f
+2023-03-09 23:47:44.137 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@63553e9f
+2023-03-09 23:47:44.137 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@63553e9f
+2023-03-09 23:47:44.138 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@5c839677
+2023-03-09 23:47:44.138 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@6e73974
+2023-03-09 23:47:44.139 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.LocaleType@7adae08e
+2023-03-09 23:47:44.139 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@7adae08e
+2023-03-09 23:47:44.139 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.CurrencyType@b1d19ff
+2023-03-09 23:47:44.139 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@b1d19ff
+2023-03-09 23:47:44.139 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.TimeZoneType@5834198f
+2023-03-09 23:47:44.139 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@5834198f
+2023-03-09 23:47:44.140 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.ClassType@38022758
+2023-03-09 23:47:44.140 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.ClassType@38022758
+2023-03-09 23:47:44.140 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@14485747
+2023-03-09 23:47:44.140 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@14485747
+2023-03-09 23:47:44.140 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@26d028f7
+2023-03-09 23:47:44.141 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BinaryType@20027c44
+2023-03-09 23:47:44.141 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BinaryType@20027c44
+2023-03-09 23:47:44.141 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BinaryType@20027c44
+2023-03-09 23:47:44.141 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@3b5da0b0
+2023-03-09 23:47:44.141 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@3b5da0b0
+2023-03-09 23:47:44.141 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@3b5da0b0
+2023-03-09 23:47:44.141 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.RowVersionType@bb12f41
+2023-03-09 23:47:44.142 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.ImageType@285bf5ac
+2023-03-09 23:47:44.142 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.CharArrayType@141bb6b8
+2023-03-09 23:47:44.142 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.CharArrayType@141bb6b8
+2023-03-09 23:47:44.142 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.CharArrayType@141bb6b8
+2023-03-09 23:47:44.143 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@329b331f
+2023-03-09 23:47:44.143 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@329b331f
+2023-03-09 23:47:44.143 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@329b331f
+2023-03-09 23:47:44.143 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.TextType@1f26b992
+2023-03-09 23:47:44.143 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.NTextType@4e6cbdf1
+2023-03-09 23:47:44.144 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BlobType@678586f0
+2023-03-09 23:47:44.144 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@678586f0
+2023-03-09 23:47:44.144 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@786ff0ea
+2023-03-09 23:47:44.144 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.ClobType@4b3ad7ca
+2023-03-09 23:47:44.144 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@4b3ad7ca
+2023-03-09 23:47:44.145 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.NClobType@4afdfc0f
+2023-03-09 23:47:44.145 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4afdfc0f
+2023-03-09 23:47:44.145 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@60652518
+2023-03-09 23:47:44.147 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@5ed65e4b
+2023-03-09 23:47:44.148 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.SerializableType@1e471884
+2023-03-09 23:47:44.150 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.ObjectType@6451a288
+2023-03-09 23:47:44.150 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@6451a288
+2023-03-09 23:47:44.150 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@7198ab9a
+2023-03-09 23:47:44.150 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@67d5ac2f
+2023-03-09 23:47:44.150 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@25109608
+2023-03-09 23:47:44.151 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@1d637673
+2023-03-09 23:47:44.151 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@2913ca3e
+2023-03-09 23:47:44.151 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@636dbfe7
+2023-03-09 23:47:44.151 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@42ecc554
+2023-03-09 23:47:44.151 DEBUG 11593 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@443af394
+2023-03-09 23:47:44.178  INFO 11593 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-09 23:47:44.608  INFO 11593 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-09 23:47:44.626  INFO 11593 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-03-09 23:47:44.649 DEBUG 11593 --- [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@34bddf43] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@57839834]
+2023-03-09 23:47:44.850 DEBUG 11593 --- [main] org.hibernate.type.EnumType              : Using NAMED-based conversion for Enum com.example.websevicedemo.domain.user.entity.Role
+2023-03-09 23:47:44.851 DEBUG 11593 --- [main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@34bddf43] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@9cb927e]
+2023-03-09 23:47:45.280  INFO 11593 --- [main] p6spy                                    : #1678373265280 | took 31ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table board_files drop foreign key FKeid4fkvt2o44moyaupmbndhnw
+alter table board_files drop foreign key FKeid4fkvt2o44moyaupmbndhnw;
+2023-03-09 23:47:45.319  INFO 11593 --- [main] p6spy                                    : #1678373265319 | took 38ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table comment drop foreign key FKlij9oor1nav89jeat35s6kbp1
+alter table comment drop foreign key FKlij9oor1nav89jeat35s6kbp1;
+2023-03-09 23:47:45.349  INFO 11593 --- [main] p6spy                                    : #1678373265349 | took 29ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table photo_book_files drop foreign key FK5a6j09irfdqbpegqrdslmnvvt
+alter table photo_book_files drop foreign key FK5a6j09irfdqbpegqrdslmnvvt;
+2023-03-09 23:47:45.381  INFO 11593 --- [main] p6spy                                    : #1678373265381 | took 31ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table re_comment drop foreign key FKlbau13r2qs2dvla5g9k3xnmpd
+alter table re_comment drop foreign key FKlbau13r2qs2dvla5g9k3xnmpd;
+2023-03-09 23:47:45.410  INFO 11593 --- [main] p6spy                                    : #1678373265410 | took 27ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table test drop foreign key FKswx8tgvx4biygw60uqgjjq7a7
+alter table test drop foreign key FKswx8tgvx4biygw60uqgjjq7a7;
+2023-03-09 23:47:45.440  INFO 11593 --- [main] p6spy                                    : #1678373265440 | took 29ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table user_authority drop foreign key USER_IDX
+alter table user_authority drop foreign key USER_IDX;
+2023-03-09 23:47:45.478  INFO 11593 --- [main] p6spy                                    : #1678373265478 | took 38ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists board
+drop table if exists board;
+2023-03-09 23:47:45.508  INFO 11593 --- [main] p6spy                                    : #1678373265508 | took 29ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists board_files
+drop table if exists board_files;
+2023-03-09 23:47:45.549  INFO 11593 --- [main] p6spy                                    : #1678373265549 | took 40ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists comment
+drop table if exists comment;
+2023-03-09 23:47:45.586  INFO 11593 --- [main] p6spy                                    : #1678373265586 | took 36ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists photo_book
+drop table if exists photo_book;
+2023-03-09 23:47:45.621  INFO 11593 --- [main] p6spy                                    : #1678373265621 | took 34ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists photo_book_files
+drop table if exists photo_book_files;
+2023-03-09 23:47:45.651  INFO 11593 --- [main] p6spy                                    : #1678373265651 | took 29ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists re_comment
+drop table if exists re_comment;
+2023-03-09 23:47:45.683  INFO 11593 --- [main] p6spy                                    : #1678373265683 | took 30ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists test
+drop table if exists test;
+2023-03-09 23:47:45.717  INFO 11593 --- [main] p6spy                                    : #1678373265717 | took 33ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists user
+drop table if exists user;
+2023-03-09 23:47:45.750  INFO 11593 --- [main] p6spy                                    : #1678373265750 | took 32ms | statement | connection 1| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+drop table if exists user_authority
+drop table if exists user_authority;
+2023-03-09 23:47:45.798  INFO 11593 --- [main] p6spy                                    : #1678373265798 | took 43ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table board (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), contents longtext, declaration bit not null, image_url varchar(255), like_count integer not null, nick_name varchar(255), password varchar(255), title varchar(255), user_id varchar(255), view_count integer not null, primary key (id)) engine=InnoDB
+create table board (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), contents longtext, declaration bit not null, image_url varchar(255), like_count integer not null, nick_name varchar(255), password varchar(255), title varchar(255), user_id varchar(255), view_count integer not null, primary key (id)) engine=InnoDB;
+2023-03-09 23:47:45.844  INFO 11593 --- [main] p6spy                                    : #1678373265844 | took 45ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table board_files (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), file_path varchar(255), file_size bigint, original_file_name varchar(255), board_id bigint, primary key (id)) engine=InnoDB
+create table board_files (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), file_path varchar(255), file_size bigint, original_file_name varchar(255), board_id bigint, primary key (id)) engine=InnoDB;
+2023-03-09 23:47:45.886  INFO 11593 --- [main] p6spy                                    : #1678373265886 | took 41ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table comment (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), comment varchar(255), reply_id varchar(255), reply_pwd varchar(255), board_id bigint, primary key (id)) engine=InnoDB
+create table comment (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), comment varchar(255), reply_id varchar(255), reply_pwd varchar(255), board_id bigint, primary key (id)) engine=InnoDB;
+2023-03-09 23:47:45.925  INFO 11593 --- [main] p6spy                                    : #1678373265925 | took 38ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table photo_book (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), contents varchar(255), title varchar(255), primary key (id)) engine=InnoDB
+create table photo_book (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), contents varchar(255), title varchar(255), primary key (id)) engine=InnoDB;
+2023-03-09 23:47:45.968  INFO 11593 --- [main] p6spy                                    : #1678373265968 | took 42ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table photo_book_files (id bigint not null auto_increment, file_path varchar(255), file_size bigint, original_file_name varchar(255), photo_book_id bigint, primary key (id)) engine=InnoDB
+create table photo_book_files (id bigint not null auto_increment, file_path varchar(255), file_size bigint, original_file_name varchar(255), photo_book_id bigint, primary key (id)) engine=InnoDB;
+2023-03-09 23:47:46.013  INFO 11593 --- [main] p6spy                                    : #1678373266013 | took 44ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table re_comment (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), re_comment varchar(255), reply_id varchar(255), reply_pwd varchar(255), comment_id bigint, primary key (id)) engine=InnoDB
+create table re_comment (id bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), re_comment varchar(255), reply_id varchar(255), reply_pwd varchar(255), comment_id bigint, primary key (id)) engine=InnoDB;
+2023-03-09 23:47:46.061  INFO 11593 --- [main] p6spy                                    : #1678373266061 | took 45ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table test (id bigint not null auto_increment, age integer, job varchar(255), nationality varchar(255), school_attended bit, user_id bigint, primary key (id)) engine=InnoDB
+create table test (id bigint not null auto_increment, age integer, job varchar(255), nationality varchar(255), school_attended bit, user_id bigint, primary key (id)) engine=InnoDB;
+2023-03-09 23:47:46.104  INFO 11593 --- [main] p6spy                                    : #1678373266104 | took 41ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table user (user_idx bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), birth varchar(255), call_number varchar(255), email varchar(255), nick_name varchar(255), role varchar(255) not null, user_name varchar(255), primary key (user_idx)) engine=InnoDB
+create table user (user_idx bigint not null auto_increment, crated_at datetime(6), updated_at datetime(6), birth varchar(255), call_number varchar(255), email varchar(255), nick_name varchar(255), role varchar(255) not null, user_name varchar(255), primary key (user_idx)) engine=InnoDB;
+2023-03-09 23:47:46.160  INFO 11593 --- [main] p6spy                                    : #1678373266160 | took 53ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+create table user_authority (id bigint not null, authority varchar(255) not null, user_idx bigint, primary key (id, authority)) engine=InnoDB
+create table user_authority (id bigint not null, authority varchar(255) not null, user_idx bigint, primary key (id, authority)) engine=InnoDB;
+2023-03-09 23:47:46.238  INFO 11593 --- [main] p6spy                                    : #1678373266238 | took 73ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table board_files add constraint FKeid4fkvt2o44moyaupmbndhnw foreign key (board_id) references board (id)
+alter table board_files add constraint FKeid4fkvt2o44moyaupmbndhnw foreign key (board_id) references board (id);
+2023-03-09 23:47:46.330  INFO 11593 --- [main] p6spy                                    : #1678373266330 | took 92ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table comment add constraint FKlij9oor1nav89jeat35s6kbp1 foreign key (board_id) references board (id)
+alter table comment add constraint FKlij9oor1nav89jeat35s6kbp1 foreign key (board_id) references board (id);
+2023-03-09 23:47:46.409  INFO 11593 --- [main] p6spy                                    : #1678373266409 | took 77ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table photo_book_files add constraint FK5a6j09irfdqbpegqrdslmnvvt foreign key (photo_book_id) references photo_book (id)
+alter table photo_book_files add constraint FK5a6j09irfdqbpegqrdslmnvvt foreign key (photo_book_id) references photo_book (id);
+2023-03-09 23:47:46.482  INFO 11593 --- [main] p6spy                                    : #1678373266482 | took 71ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table re_comment add constraint FKlbau13r2qs2dvla5g9k3xnmpd foreign key (comment_id) references comment (id)
+alter table re_comment add constraint FKlbau13r2qs2dvla5g9k3xnmpd foreign key (comment_id) references comment (id);
+2023-03-09 23:47:46.554  INFO 11593 --- [main] p6spy                                    : #1678373266553 | took 70ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table test add constraint FKswx8tgvx4biygw60uqgjjq7a7 foreign key (user_id) references user (user_idx)
+alter table test add constraint FKswx8tgvx4biygw60uqgjjq7a7 foreign key (user_id) references user (user_idx);
+2023-03-09 23:47:46.638  INFO 11593 --- [main] p6spy                                    : #1678373266638 | took 83ms | statement | connection 2| url jdbc:mysql://database-1.c0pvliixxbbb.ap-northeast-2.rds.amazonaws.com:3306/yoojin_cell?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+alter table user_authority add constraint USER_IDX foreign key (user_idx) references user (user_idx)
+alter table user_authority add constraint USER_IDX foreign key (user_idx) references user (user_idx);
+2023-03-09 23:47:46.642  INFO 11593 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-09 23:47:46.653 TRACE 11593 --- [main] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@9cb927e] for TypeConfiguration
+2023-03-09 23:47:46.654  INFO 11593 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-09 23:47:47.093  WARN 11593 --- [main] c.a.a.p.i.BasicProfileConfigLoader       : Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+2023-03-09 23:47:47.095  WARN 11593 --- [main] c.a.a.p.i.BasicProfileConfigLoader       : Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+2023-03-09 23:47:47.113  WARN 11593 --- [main] c.a.a.p.i.BasicProfileConfigLoader       : Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+2023-03-09 23:47:47.113  WARN 11593 --- [main] c.a.a.p.i.BasicProfileConfigLoader       : Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+2023-03-09 23:47:47.203  WARN 11593 --- [main] c.a.a.p.i.BasicProfileConfigLoader       : Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+2023-03-09 23:47:47.204  WARN 11593 --- [main] c.a.a.p.i.BasicProfileConfigLoader       : Your profile name includes a 'profile ' prefix. This is considered part of the profile name in the Java SDK, so you will need to include this prefix in your profile name when you reference this profile from your Java code.
+2023-03-09 23:47:47.599  INFO 11593 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Or [Ant [pattern='/resources/**']] with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@535adf36, org.springframework.security.web.header.HeaderWriterFilter@22db974d, org.springframework.security.web.csrf.CsrfFilter@25639668, org.springframework.security.web.authentication.logout.LogoutFilter@439054a7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7154a248, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ea4290f, org.springframework.security.web.access.ExceptionTranslationFilter@4d21b505, org.springframework.security.web.access.intercept.AuthorizationFilter@2cc82c83]
+2023-03-09 23:47:47.625  INFO 11593 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@167ccc3c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@292b7a02, org.springframework.security.web.context.SecurityContextPersistenceFilter@37f75ebf, org.springframework.security.web.header.HeaderWriterFilter@62ad5f35, org.springframework.web.filter.CorsFilter@3e242137, org.springframework.security.web.authentication.logout.LogoutFilter@4ad57db1, com.example.websevicedemo.global.config.jwt.JwtAuthenticationFilter@25dacc5a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23d0f6be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48cebb78, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55b7f9f1, org.springframework.security.web.session.SessionManagementFilter@45e49d3d, org.springframework.security.web.access.ExceptionTranslationFilter@34947355, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e60890c]
+2023-03-09 23:47:47.742  WARN 11593 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-09 23:47:47.907  INFO 11593 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-03-09 23:47:48.771  INFO 11593 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-09 23:47:48.791  INFO 11593 --- [main] c.e.w.WebSeviceDemoApplication           : Started WebSeviceDemoApplication in 7.525 seconds (JVM running for 8.673)
+2023-03-09 23:47:58.081  INFO 11593 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-09 23:47:58.084  INFO 11593 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-09 23:47:58.090  INFO 11593 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-03-09 23:48:00.985  INFO 11593 --- [http-nio-8080-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 526 ms
+2023-03-09 23:48:53.995  INFO 11593 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-09 23:48:53.996 TRACE 11593 --- [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@9cb927e] for TypeConfiguration
+2023-03-09 23:48:53.996 DEBUG 11593 --- [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@10b36c98] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@9cb927e]
+2023-03-09 23:48:54.000  INFO 11593 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-09 23:48:54.105  INFO 11593 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
