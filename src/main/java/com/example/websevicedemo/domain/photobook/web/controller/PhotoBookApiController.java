@@ -39,7 +39,7 @@ public class PhotoBookApiController {
     public Long photoBookSave(
             PhotoBookDto photoBookDto
     ) throws Exception {
-        log.info("photoBookDto : {}", photoBookDto);
+//        log.info("photoBookDto : {}", photoBookDto);
         return photoBookService.create(photoBookDto);
     }
 
