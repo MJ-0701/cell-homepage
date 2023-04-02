@@ -31,17 +31,17 @@ public class Board extends BaseTimeEntity {
 
     private String password;
 
-    private int viewCount = 0;
+    private final int viewCount = 0;
 
     private int likeCount = 0;
 
     private boolean declaration = false;
 
     @OneToMany(mappedBy = "board", cascade = {CascadeType.REMOVE, CascadeType.PERSIST}, orphanRemoval = true)
-    private List<Comment> commentList = new ArrayList<>();
+    private final List<Comment> commentList = new ArrayList<>();
 
     @OneToMany(mappedBy = "board", cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
-    private List<BoardFiles> files = new ArrayList<>();
+    private final List<BoardFiles> files = new ArrayList<>();
 
     private String imageUrl;
 
