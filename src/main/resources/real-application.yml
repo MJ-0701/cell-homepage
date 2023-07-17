@@ -1,0 +1,32 @@
+cloud:
+  aws:
+    stack:
+      auto: false
+    s3:
+      folder:
+        folderName: "s3_버킷_폴더이름"
+      bucket: "s3_버킷_이름"
+    credentials:
+      access-key: "iam_access_key(잃어버렸다면 다시 생성)"
+      secret-key: "iam_secret_key(잃어버렸다면 다시 생성)"
+    region:
+      static: ap-northeast-2
+
+spring:
+    jpa:
+    hibernate:
+      ddl-auto: 'validate'
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+    defer-datasource-initialization: true
+    database: mysql
+
+    datasource:
+      url: "rds 주소"
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: "rds_id"
+      password: "rds_pwd"
+
+
